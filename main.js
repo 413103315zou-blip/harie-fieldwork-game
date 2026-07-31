@@ -380,8 +380,8 @@ let investigationFeedbackMark = null;
 
 // 新增花卉调查点的实际素材位置（同时供调查界面与笔记本使用）
 const FLOWER_INVESTIGATION_IMAGE_PATHS = {
-    flower1: "assets/investigation/images/flower1.JPG",
-    flower2: "assets/portraits/flower2.JPG"
+    flower1: "assets/investigation/images/flower1.jpg",
+    flower2: "assets/portraits/flower2.jpg"
 };
 
 //===== Notebook 布局常量（Fragments 目录页）=====
