@@ -4628,17 +4628,17 @@ function showDialogLine(scene, lineOverride) {
 }
 
 //--------------------------------
-// 对话框右下角 E 键继续提示
+// 对话正文第一行左侧 E 键继续提示
 // 与调查点 interactPrompt 共用文字来源与视觉样式
 //--------------------------------
 
-function createDialogContinuePrompt(scene, depth) {
+function createDialogContinuePrompt(scene, depth, bodyText) {
 
-    if (!scene) return null;
+    if (!scene || !bodyText) return null;
 
     const prompt = scene.add.text(
-        910,
-        610,
+        bodyText.x - 28,
+        bodyText.y + 28,
         safeText(
             t("system.interactPrompt", {}, "E")
         ),
@@ -4683,7 +4683,7 @@ function showDialogContinuePrompt(scene) {
     if (dialogContinuePrompt && dialogContinuePrompt.active) return;
 
     dialogContinuePrompt =
-        createDialogContinuePrompt(scene, 3201);
+        createDialogContinuePrompt(scene, 3201, dialogText);
 
 }
 
@@ -7665,7 +7665,11 @@ function startAuthorEnding(scene) {
         align: "center"
     }).setOrigin(0.5, 0).setScrollFactor(0).setDepth(10122);
     authorEndingContinuePrompt =
-        createDialogContinuePrompt(scene, 10123);
+        createDialogContinuePrompt(
+            scene,
+            10123,
+            authorEndingDialogText
+        );
 
     showAuthorEndingLine();
 }
