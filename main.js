@@ -267,6 +267,7 @@ let foregroundGroup;
 let dialogBox;
 let dialogText;
 let portraitImage;
+let dialogContinuePrompt = null;
 
 let keyE;
 let keySpace;
@@ -309,6 +310,7 @@ let authorEndingDialogBox = null;
 let authorEndingDialogText = null;
 let authorEndingNameBackground = null;
 let authorEndingNameText = null;
+let authorEndingContinuePrompt = null;
 
 //===== NPC Talk Notification System =====
 let storyEventsData = null;                         // story_events.json 数据
@@ -3588,6 +3590,7 @@ function endPrologue(scene) {
 
     dialogBox.setVisible(false);
     dialogText.setVisible(false);
+    hideDialogContinuePrompt(scene);
 
     //--------------------------------
     // 隐藏姓名
@@ -4620,6 +4623,74 @@ function showDialogLine(scene, lineOverride) {
     }
 
     dialogText.setText(safeText(text));
+    showDialogContinuePrompt(scene);
+
+}
+
+//--------------------------------
+// 对话框右下角 E 键继续提示
+// 与调查点 interactPrompt 共用文字来源与视觉样式
+//--------------------------------
+
+function createDialogContinuePrompt(scene, depth) {
+
+    if (!scene) return null;
+
+    const prompt = scene.add.text(
+        910,
+        610,
+        safeText(
+            t("system.interactPrompt", {}, "E")
+        ),
+        {
+            fontSize: "18px",
+            color: "#ffff00",
+            backgroundColor: "rgba(0,0,0,0.7)",
+            padding: { x: 6, y: 3 }
+        }
+    )
+        .setOrigin(1, 1)
+        .setScrollFactor(0)
+        .setDepth(depth);
+
+    scene.tweens.add({
+        targets: prompt,
+        alpha: 0.4,
+        duration: 350,
+        ease: "Linear",
+        yoyo: true,
+        repeat: -1
+    });
+
+    return prompt;
+
+}
+
+function destroyDialogContinuePrompt(scene, prompt) {
+
+    if (!prompt) return;
+
+    if (scene && scene.tweens) {
+        scene.tweens.killTweensOf(prompt);
+    }
+
+    prompt.destroy();
+
+}
+
+function showDialogContinuePrompt(scene) {
+
+    if (dialogContinuePrompt && dialogContinuePrompt.active) return;
+
+    dialogContinuePrompt =
+        createDialogContinuePrompt(scene, 3201);
+
+}
+
+function hideDialogContinuePrompt(scene) {
+
+    destroyDialogContinuePrompt(scene, dialogContinuePrompt);
+    dialogContinuePrompt = null;
 
 }
 
@@ -4633,6 +4704,7 @@ function closeDialog(scene) {
 
     dialogBox.setVisible(false);
     dialogText.setVisible(false);
+    hideDialogContinuePrompt(scene);
 
     //--------------------------------
     // 隐藏姓名
@@ -7310,6 +7382,9 @@ function hideGameplayUI(scene) {
     isDialogOpen = false;
     isNpcMenuOpen = false;
     isInvestigationOpen = false;
+    hideDialogContinuePrompt(scene);
+    destroyDialogContinuePrompt(scene, authorEndingContinuePrompt);
+    authorEndingContinuePrompt = null;
 
     const uiObjects = [
         notebookClosedIcon, notebookOpenImage, tutorialFKeyHint,
@@ -7589,6 +7664,8 @@ function startAuthorEnding(scene) {
         strokeThickness: 4,
         align: "center"
     }).setOrigin(0.5, 0).setScrollFactor(0).setDepth(10122);
+    authorEndingContinuePrompt =
+        createDialogContinuePrompt(scene, 10123);
 
     showAuthorEndingLine();
 }
@@ -7612,6 +7689,8 @@ function advanceAuthorEnding(scene) {
     }
 
     isAuthorEndingPlaying = false;
+    destroyDialogContinuePrompt(scene, authorEndingContinuePrompt);
+    authorEndingContinuePrompt = null;
     safeArray([
         authorEndingPortrait,
         authorEndingDialogBox,
