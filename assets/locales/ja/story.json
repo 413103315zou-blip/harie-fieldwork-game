@@ -1,0 +1,61 @@
+{
+  "initialStoryStage": 0,
+  "endingFragments": [
+    "rice_seedling",
+    "history",
+    "community_center"
+  ],
+  "endingAvailableFragments": [
+    "rice_seedling",
+    "history",
+    "community_center",
+    "flower1",
+    "flower2"
+  ],
+  "endingRequiredFragments": [
+    "rice_seedling",
+    "history",
+    "community_center"
+  ],
+  "endingCG": {
+    "image": "ending_cg.png",
+    "duration": 5000
+  },
+  "warpRequirements": {
+    "harie_community_center": {
+      "storyStageMin": 2
+    }
+  },
+  "prologue": {
+    "autoPlay": true,
+    "dialogs": [
+      { "speaker": "narrator", "text": "針江――琵琶湖の畔にある、水の集落。" },
+      { "speaker": "narrator", "text": "湧き水が年中冷たい。夏も冬も変わらない。" },
+      { "speaker": "narrator", "text": "この水が、人々の暮らしを支えてきた。" },
+      { "speaker": "narrator", "text": "今日、一人の旅人がこの村を訪れる。" },
+      { "speaker": "machi", "text": "ここが滋賀県の針江ですか？" },
+      { "speaker": "machi", "text": "どうしてバス駅までもこんなに静かなんですか……\n水の音だけがやけに大きく聞こえるんですけど。" },
+      { "speaker": "machi", "text": "あちらの方がこの宿のご担当者ですか？ まずは挨拶をしに行きましょう" }
+    ]
+  },
+  "investigationTriggers": [
+    {
+      "fragmentId": "hostel",
+      "setStoryStage": 2
+    },
+    {
+      "fragmentId": "community_board",
+      "requirements": {
+        "investigated": ["community_board", "old_house"]
+      },
+      "setStoryStage": 4
+    },
+    {
+      "fragmentId": "old_house",
+      "requirements": {
+        "investigated": ["community_board", "old_house"]
+      },
+      "setStoryStage": 4
+    }
+  ]
+}

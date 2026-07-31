@@ -1,0 +1,22 @@
+{
+  "title": "针江散步",
+  "overlayAlpha": 0.5,
+  "defaultBgmVolume": 50,
+  "defaultSeVolume": 50,
+  "fadeDuration": 500,
+  "startMenu": {
+    "mainButton": "新游戏",
+    "settingsButton": "设置",
+    "browserZoomHint": "如果画面较小，请调整浏览器缩放比例"
+  },
+  "pauseMenu": {
+    "mainButton": "继续游戏",
+    "settingsButton": "设置"
+  },
+  "settingsMenu": {
+    "title": "设置",
+    "bgmLabel": "音乐",
+    "seLabel": "音效",
+    "backButton": "返回"
+  }
+}

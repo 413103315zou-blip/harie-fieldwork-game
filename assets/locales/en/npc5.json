@@ -1,0 +1,132 @@
+{
+  "dialogGroups": [
+    {
+      "id": "first_meeting",
+      "role": "first_meeting",
+      "askable": false,
+      "requirements": {
+        "storyStageMin": 0
+      },
+      "once": true,
+      "played": false,
+      "priority": 100,
+      "dialogs": [
+        { "speaker": "child2", "text": "That place over there is a secret base—nobody else is allowed in." },
+        { "speaker": "machi", "text": "Secret base?" },
+        { "speaker": "child2", "text": "If you peek through the hole where the water sound comes from, there are tons of koi." },
+        { "speaker": "machi", "text": "Tons of koi?" },
+        { "speaker": "child2", "text": "Don't tell the grown-ups, okay? Promise." }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "after_potato_sorting",
+      "role": "question",
+      "askable": true,
+      "questionTitle": "About the Potatoes",
+      "requirements": {
+        "storyStageMin": 1,
+        "investigated": ["potato_sorting"]
+      },
+      "once": true,
+      "played": false,
+      "priority": 90,
+      "dialogs": [
+        { "speaker": "child2", "text": "Did you see the potato sorting?" },
+        { "speaker": "machi", "text": "Yeah. They were separating the big ones from the small ones." },
+        { "speaker": "child1", "text": "Every single one is a different shape and size." },
+        { "speaker": "child2", "text": "It looks easy, but you really have to look carefully." },
+        { "speaker": "child1", "text": "I've helped before. It makes your eyes tired." },
+        { "speaker": "machi", "text": "I see. That sounds like hard work." },
+        { "speaker": "child2", "text": "But it feels really good when you finish sorting them." }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [
+        {
+          "fragmentId": "potato_sorting",
+          "memo": "Every potato is a different shape and size. You have to look carefully.",
+          "quote": "You really have to look carefully.",
+          "speaker": "child2"
+        }
+      ],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "stage1_default",
+      "role": "default",
+      "askable": false,
+      "requirements": {
+        "storyStageMin": 0
+      },
+      "once": false,
+      "played": false,
+      "priority": 0,
+      "dialogs": [
+        { "speaker": "child2", "text": "Did you come to play again?" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "after_old_house",
+      "role": "question",
+      "askable": true,
+      "questionTitle": "The One Who Comes Back",
+      "requirements": {
+        "storyStageMin": 3,
+        "investigated": ["old_house"]
+      },
+      "once": true,
+      "played": false,
+      "priority": 80,
+      "dialogs": [
+        { "speaker": "child2", "text": "My big brother didn't come back again this year." },
+        { "speaker": "machi", "text": "Big brother?" },
+        { "speaker": "child2", "text": "We used to play together in that house." },
+        { "speaker": "child2", "text": "But the water just keeps flowing, same as always." },
+        { "speaker": "child1", "text": "Grandpa said so—as long as there's water, he'll come back someday." },
+        { "speaker": "machi", "text": "I see..." }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [
+        {
+          "fragmentId": "old_house",
+          "memo": "Some people never come back. But the water keeps flowing as always.",
+          "quote": "Grandpa said—as long as there's water, he'll come back someday.",
+          "speaker": "child1"
+        }
+      ],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "future_placeholder",
+      "role": "default",
+      "askable": false,
+      "requirements": {
+        "storyStageMin": 99
+      },
+      "once": true,
+      "played": false,
+      "priority": 0,
+      "dialogs": [
+        { "speaker": "child2", "text": "…" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    }
+  ]
+}

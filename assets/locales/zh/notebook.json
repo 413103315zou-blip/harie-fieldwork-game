@@ -1,0 +1,53 @@
+{
+  "progress": {
+    "collectedLabel": "收集进度"
+  },
+  "pages": [
+    {
+      "id": "people",
+      "title": "人物",
+      "items": [
+        {
+          "id": "ishizu",
+          "name": "石津",
+          "portrait": "ishizu",
+          "text": "针江悠闲农场（のんきファーム）负责人。（生活・现在）",
+          "unlocked": false
+        },
+        {
+          "id": "oldman",
+          "name": "老伯",
+          "portrait": "oldman",
+          "text": "了解针江过去的人。（过去·传统）",
+          "unlocked": false
+        },
+        {
+          "id": "child1",
+          "name": "孩子A",
+          "portrait": "child1",
+          "text": "憧憬着未来。（未来·希望）",
+          "unlocked": false
+        },
+        {
+          "id": "child2",
+          "name": "孩子B",
+          "portrait": "child2",
+          "text": "天真朴素，纯真无邪。（未来·希望）",
+          "unlocked": false
+        },
+        {
+          "id": "koi",
+          "name": "鲤鱼",
+          "portrait": "koi",
+          "text": "在自然中生活的生灵。（自然·生命）",
+          "unlocked": false
+        }
+      ]
+    },
+    {
+      "id": "fragments",
+      "title": "书签",
+      "type": "list"
+    }
+  ]
+}

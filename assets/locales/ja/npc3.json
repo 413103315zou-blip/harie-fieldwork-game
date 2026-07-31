@@ -1,0 +1,158 @@
+{
+  "dialogGroups": [
+    {
+      "id": "first_meeting",
+      "role": "first_meeting",
+      "askable": false,
+      "requirements": {
+        "storyStageMin": 0
+      },
+      "once": true,
+      "played": false,
+      "priority": 100,
+      "dialogs": [
+        { "speaker": "koi", "text": "そんなに見つめて、どうしたんだ。" },
+        { "speaker": "machi", "text": "えっ、鯉が話した……？" },
+        { "speaker": "koi", "text": "この水に長くいれば、少しくらい話せるようになる。" },
+        { "speaker": "koi", "text": "まずは水の流れをよく見てみな。" },
+        { "speaker": "machi", "text": "水の流れ……？" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "after_water_grass",
+      "role": "question",
+      "askable": true,
+      "questionTitle": "水草について",
+      "requirements": {
+        "storyStageMin": 1,
+        "investigated": ["water_grass"]
+      },
+      "once": true,
+      "played": false,
+      "priority": 90,
+      "dialogs": [
+        { "speaker": "koi", "text": "水草の揺れ、見てきたか。" },
+        { "speaker": "machi", "text": "はい。水面は静かなのに、草がゆらゆら動いていました。" },
+        { "speaker": "koi", "text": "表面が静かでも、水は止まらずに流れている。" },
+        { "speaker": "machi", "text": "そう言われてみれば、草が全部同じ方向に揺れていました。" },
+        { "speaker": "koi", "text": "その方向が、水の流れる方向だ。" },
+        { "speaker": "koi", "text": "草の揺れを見れば、水がどう動いているか分かる。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [
+        {
+          "fragmentId": "water_grass",
+          "memo": "水面は静かでも、水の流れは止まっていない",
+          "quote": "草の揺れを見れば、水がどう動いているか分かる",
+          "speaker": "koi"
+        }
+      ],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "after_okawa_surface",
+      "role": "question",
+      "askable": true,
+      "questionTitle": "水の流れについて",
+      "requirements": {
+        "storyStageMin": 1,
+        "investigated": ["water_surface"]
+      },
+      "once": true,
+      "played": false,
+      "priority": 80,
+      "dialogs": [
+        { "speaker": "koi", "text": "大川の水面を見てきたか。" },
+        { "speaker": "machi", "text": "はい。光が反射して綺麗でした。" },
+        { "speaker": "koi", "text": "水面の輝きは、水が動いている証拠だ。" },
+        { "speaker": "machi", "text": "動いている……？" },
+        { "speaker": "koi", "text": "見えない速度で、水はいつも流れている。" },
+        { "speaker": "koi", "text": "水面を見つめていれば、その動きが少しずつ見えてくる。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [
+        {
+          "fragmentId": "water_surface",
+          "memo": "水面の輝きは水が動いている証拠",
+          "quote": "水面を見つめていれば、その動きが少しずつ見えてくる",
+          "speaker": "koi"
+        }
+      ],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "stage1_default",
+      "role": "default",
+      "askable": false,
+      "requirements": {
+        "storyStageMin": 0
+      },
+      "once": false,
+      "played": false,
+      "priority": 0,
+      "dialogs": [
+        { "speaker": "koi", "text": "今日は水がよく澄んでいるな。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "after_hostel_loop",
+      "role": "question",
+      "askable": true,
+      "questionTitle": "宿の水について",
+      "requirements": {
+        "storyStageMin": 2,
+        "storyStageMax": 2,
+        "currentMap": "harie_room",
+        "investigated": ["foyer", "table", "poolroom", "pool", "rice", "soup", "kitchen"]
+      },
+      "once": true,
+      "played": false,
+      "priority": 400,
+      "dialogs": [
+        { "speaker": "koi", "text": "宿の中を見て、水が暮らしを支えていることが分かったようだな。" },
+        { "speaker": "machi", "text": "はい。料理にもお生活用水にも、同じ水が使われていました。" },
+        { "speaker": "machi", "text": "こういう人工生態循環システムは、ほかの場所では一度も見たことが\nありません。" },
+        { "speaker": "koi", "text": "そうそう、これが針江ならではの『人と自然』の関係だよ。" },
+        { "speaker": "koi", "text": "これをやり遂げるのは、簡単なことじゃないよね。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": 3
+    },
+    {
+      "id": "future_placeholder",
+      "role": "default",
+      "askable": false,
+      "requirements": {
+        "storyStageMin": 99
+      },
+      "once": true,
+      "played": false,
+      "priority": 0,
+      "dialogs": [
+        { "speaker": "koi", "text": "…" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    }
+  ]
+}

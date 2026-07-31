@@ -1,0 +1,167 @@
+{
+  "dialogGroups": [
+    {
+      "id": "first_meeting",
+      "role": "first_meeting",
+      "askable": false,
+      "requirements": {
+        "storyStageMin": 0
+      },
+      "once": true,
+      "played": false,
+      "priority": 100,
+      "dialogs": [
+        { "speaker": "child1", "text": "Oh, you're from the city!" },
+        { "speaker": "child1", "text": "Rafting down the river here is the most fun!" },
+        { "speaker": "child1", "text": "You can hear the water the whole time—it feels like you're swimming." },
+        { "speaker": "machi", "text": "Yeah, the sound of water is really something." },
+        { "speaker": "child1", "text": "Right? Though when I grow up, part of me wants to leave this village..." }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "after_weeding",
+      "role": "question",
+      "askable": true,
+      "questionTitle": "About the Field Work",
+      "requirements": {
+        "storyStageMin": 1,
+        "investigated": ["weeding"]
+      },
+      "once": true,
+      "played": false,
+      "priority": 90,
+      "dialogs": [
+        { "speaker": "child1", "text": "Did you see the work in the field?" },
+        { "speaker": "machi", "text": "Yeah. Pulling weeds looked like hard work." },
+        { "speaker": "child2", "text": "They do that all the time. Summer and winter." },
+        { "speaker": "child1", "text": "I want to help too, but I'm still too small." },
+        { "speaker": "child2", "text": "Grandma always does it by herself." },
+        { "speaker": "machi", "text": "Wouldn't it be better if everyone helped?" },
+        { "speaker": "child1", "text": "But Grandma says she has her own way of doing things." }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [
+        {
+          "fragmentId": "weeding",
+          "memo": "Weeding is a daily task that continues through summer and winter.",
+          "quote": "They do that all the time. Summer and winter.",
+          "speaker": "child2"
+        }
+      ],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "stage1_default",
+      "role": "default",
+      "askable": false,
+      "requirements": {
+        "storyStageMin": 0
+      },
+      "once": false,
+      "played": false,
+      "priority": 0,
+      "dialogs": [
+        { "speaker": "child1", "text": "Did you find something else?" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "after_old_house",
+      "role": "question",
+      "askable": true,
+      "questionTitle": "About the Empty House",
+      "requirements": {
+        "storyStageMin": 3,
+        "investigated": ["old_house"]
+      },
+      "once": true,
+      "played": false,
+      "priority": 80,
+      "dialogs": [
+        { "speaker": "child1", "text": "Did you see that empty house?" },
+        { "speaker": "machi", "text": "Yeah. Looks like nobody lives there." },
+        { "speaker": "child1", "text": "That place is our secret base." },
+        { "speaker": "child1", "text": "There's a big chest inside, and hiding in it is really fun." },
+        { "speaker": "machi", "text": "I see. But isn't it a little scary?" },
+        { "speaker": "child1", "text": "Not at all. But... I wonder if my big brother will ever come back." }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [
+        {
+          "fragmentId": "old_house",
+          "memo": "The empty house is the kids' secret base. But someone hasn't come back.",
+          "quote": "I wonder if my big brother will ever come back.",
+          "speaker": "child1"
+        }
+      ],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "stage4_boat_memory",
+      "role": "story",
+      "askable": false,
+      "requirements": {
+        "storyStageMin": 4,
+        "storyStageMax": 4,
+        "investigated": ["okawa"]
+      },
+      "once": true,
+      "played": false,
+      "priority": 500,
+      "dialogs": [
+        { "speaker": "child1", "text": "The water's cold and feels so good!" },
+        { "speaker": "machi", "text": "Do you play in the river a lot?" },
+        { "speaker": "child1", "text": "Grandpa said they used to play here even more in the old days." },
+        { "speaker": "child1", "text": "They used to get on a boat here and ride it all the way to Lake Biwa." },
+        { "speaker": "machi", "text": "From this river to Lake Biwa?" },
+        { "speaker": "child2", "text": "Yeah. The water goes all the way over there, he said." },
+        { "speaker": "child1", "text": "We don't play like that much anymore, though." },
+        { "speaker": "machi", "text": "The water flowing through the village connects all the way to Lake Biwa..." }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [
+        {
+          "fragmentId": "okawa",
+          "memo": "The Okawa River flows from the village to Lake Biwa.",
+          "quote": "They used to get on a boat here and ride it all the way to Lake Biwa.",
+          "speaker": "child1"
+        }
+      ],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "future_placeholder",
+      "role": "default",
+      "askable": false,
+      "requirements": {
+        "storyStageMin": 99
+      },
+      "once": true,
+      "played": false,
+      "priority": 0,
+      "dialogs": [
+        { "speaker": "child1", "text": "…" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    }
+  ]
+}

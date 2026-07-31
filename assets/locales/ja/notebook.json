@@ -1,0 +1,53 @@
+{
+  "progress": {
+    "collectedLabel": "収集状況"
+  },
+  "pages": [
+    {
+      "id": "people",
+      "title": "人物",
+      "items": [
+        {
+          "id": "ishizu",
+          "name": "石津",
+          "portrait": "ishizu",
+          "text": "針江のんきふぁーむ担当。（現在・生活）",
+          "unlocked": false
+        },
+        {
+          "id": "oldman",
+          "name": "おじさん",
+          "portrait": "oldman",
+          "text": "針江の昔を知っている人。（過去・伝統）",
+          "unlocked": false
+        },
+        {
+          "id": "child1",
+          "name": "子供A",
+          "portrait": "child1",
+          "text": "未来に憧れている。（未来・希望）",
+          "unlocked": false
+        },
+        {
+          "id": "child2",
+          "name": "子供B",
+          "portrait": "child2",
+          "text": "無邪気で素朴、純真で屈託がない。（未来・希望）",
+          "unlocked": false
+        },
+        {
+          "id": "koi",
+          "name": "鯉",
+          "portrait": "koi",
+          "text": "自然の中で生きる生き物。（自然・生命）",
+          "unlocked": false
+        }
+      ]
+    },
+    {
+      "id": "fragments",
+      "title": "しおり",
+      "type": "list"
+    }
+  ]
+}

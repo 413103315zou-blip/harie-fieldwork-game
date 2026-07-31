@@ -1,0 +1,158 @@
+{
+  "dialogGroups": [
+    {
+      "id": "first_meeting",
+      "role": "first_meeting",
+      "askable": false,
+      "requirements": {
+        "storyStageMin": 0
+      },
+      "once": true,
+      "played": false,
+      "priority": 100,
+      "dialogs": [
+        { "speaker": "koi", "text": "这么盯着我看，怎么了？" },
+        { "speaker": "machi", "text": "诶，鲤鱼说话了……？" },
+        { "speaker": "koi", "text": "在这水里待久了，多少能学会说话。" },
+        { "speaker": "koi", "text": "先好好看看水的流向吧。" },
+        { "speaker": "machi", "text": "水的流向……？" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "after_water_grass",
+      "role": "question",
+      "askable": true,
+      "questionTitle": "关于水草",
+      "requirements": {
+        "storyStageMin": 1,
+        "investigated": ["water_grass"]
+      },
+      "once": true,
+      "played": false,
+      "priority": 90,
+      "dialogs": [
+        { "speaker": "koi", "text": "水草的摇曳，看过了吗？" },
+        { "speaker": "machi", "text": "嗯。水面明明很平静，草却在缓缓飘动。" },
+        { "speaker": "koi", "text": "即使表面平静，水也没有停止流动。" },
+        { "speaker": "machi", "text": "这么说的话，草确实都在朝同一个方向摇。" },
+        { "speaker": "koi", "text": "那个方向，就是水流动的方向。" },
+        { "speaker": "koi", "text": "看草的摇曳，就能知道水是怎么动的。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [
+        {
+          "fragmentId": "water_grass",
+          "memo": "即使水面平静，水流也没有停止",
+          "quote": "看草的摇曳，就能知道水是怎么动的",
+          "speaker": "koi"
+        }
+      ],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "after_okawa_surface",
+      "role": "question",
+      "askable": true,
+      "questionTitle": "关于水流",
+      "requirements": {
+        "storyStageMin": 1,
+        "investigated": ["water_surface"]
+      },
+      "once": true,
+      "played": false,
+      "priority": 80,
+      "dialogs": [
+        { "speaker": "koi", "text": "大川的水面，看过了吗？" },
+        { "speaker": "machi", "text": "嗯。光线反射在上面，很漂亮。" },
+        { "speaker": "koi", "text": "水面的光辉，是水在流动的证据。" },
+        { "speaker": "machi", "text": "在流动……？" },
+        { "speaker": "koi", "text": "以看不见的速度，水一直在流。" },
+        { "speaker": "koi", "text": "盯着水面看的话，那个动态会慢慢显现出来。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [
+        {
+          "fragmentId": "water_surface",
+          "memo": "水面的光辉是水在流动的证据",
+          "quote": "盯着水面看的话，那个动态会慢慢显现出来",
+          "speaker": "koi"
+        }
+      ],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "stage1_default",
+      "role": "default",
+      "askable": false,
+      "requirements": {
+        "storyStageMin": 0
+      },
+      "once": false,
+      "played": false,
+      "priority": 0,
+      "dialogs": [
+        { "speaker": "koi", "text": "今天水很清澈啊。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "after_hostel_loop",
+      "role": "question",
+      "askable": true,
+      "questionTitle": "关于旅馆的水",
+      "requirements": {
+        "storyStageMin": 2,
+        "storyStageMax": 2,
+        "currentMap": "harie_room",
+        "investigated": ["foyer", "table", "poolroom", "pool", "rice", "soup", "kitchen"]
+      },
+      "once": true,
+      "played": false,
+      "priority": 400,
+      "dialogs": [
+        { "speaker": "koi", "text": "看过旅馆里面，你似乎明白了水支撑着生活。" },
+        { "speaker": "machi", "text": "嗯。做饭也好生活用水也好，用的都是同样的水。" },
+        { "speaker": "machi", "text": "这样的人工生态循环系统，\n我在其他地方从未见过。" },
+        { "speaker": "koi", "text": "没错，这就是针江独有的\u201c人与自然\u201d的关系。" },
+        { "speaker": "koi", "text": "能做到这一点，可不是一件容易的事。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": 3
+    },
+    {
+      "id": "future_placeholder",
+      "role": "default",
+      "askable": false,
+      "requirements": {
+        "storyStageMin": 99
+      },
+      "once": true,
+      "played": false,
+      "priority": 0,
+      "dialogs": [
+        { "speaker": "koi", "text": "…" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    }
+  ]
+}

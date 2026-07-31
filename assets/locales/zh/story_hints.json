@@ -1,0 +1,223 @@
+[
+  {
+    "id": "stage5_final_dialog",
+    "priority": 600,
+    "requirements": {
+      "storyStageMin": 5,
+      "storyStageMax": 5,
+      "endingFragmentsComplete": true
+    },
+    "text": "石津似乎想说些什么"
+  },
+  {
+    "id": "stage5_free_explore",
+    "priority": 500,
+    "requirements": {
+      "storyStageMin": 5,
+      "storyStageMax": 5,
+      "endingFragmentsComplete": false
+    },
+    "text": "自由调查时间\n到处走走看看吧"
+  },
+  {
+    "id": "stage2_hostel_hint",
+    "priority": 250,
+    "requirements": {
+      "storyStageMin": 2,
+      "storyStageMax": 2,
+      "currentMap": "harie_outside",
+      "playedDialogGroups": [
+        { "npcId": "npc1", "groupId": "after_free_exploration" }
+      ],
+      "notInvestigated": ["hostel"]
+    },
+    "text": "去旅馆附近看看吧"
+  },
+  {
+    "id": "stage2_enter_hostel",
+    "priority": 250,
+    "requirements": {
+      "storyStageMin": 2,
+      "storyStageMax": 2,
+      "currentMap": "harie_outside",
+      "playedDialogGroups": [
+        { "npcId": "npc1", "groupId": "after_free_exploration" }
+      ],
+      "investigated": ["hostel"]
+    },
+    "text": "进旅馆里面看看吧"
+  },
+  {
+    "id": "stage2_talk_to_ishizu",
+    "priority": 270,
+    "requirements": {
+      "storyStageMin": 2,
+      "storyStageMax": 2,
+      "currentMap": "harie_outside",
+      "playedDialogGroups": [
+        { "npcId": "npc3", "groupId": "after_hostel_loop" }
+      ]
+    },
+    "text": "在村里走一走，试着和当地居民聊聊吧"
+  },
+  {
+    "id": "room_foyer_hint",
+    "priority": 260,
+    "requirements": {
+      "currentMap": "harie_room",
+      "notInvestigated": ["foyer"]
+    },
+    "text": "在旅馆里到处看看吧"
+  },
+  {
+    "id": "room_table_hint",
+    "priority": 250,
+    "requirements": {
+      "currentMap": "harie_room",
+      "investigated": ["foyer"],
+      "notInvestigated": ["table"]
+    },
+    "text": "桌子上好像放着什么东西"
+  },
+  {
+    "id": "room_poolroom_hint",
+    "priority": 240,
+    "requirements": {
+      "currentMapIn": ["harie_room"],
+      "investigated": ["foyer", "table"],
+      "notInvestigated": ["poolroom"]
+    },
+    "text": "深处传来水声"
+  },
+  {
+    "id": "stage1_field",
+    "priority": 100,
+    "requirements": {
+      "storyStageMin": 1,
+      "storyStageMax": 1,
+      "notInvestigated": ["field"]
+    },
+    "text": "仔细看看水田吧"
+  },
+  {
+    "id": "stage1_weeding",
+    "priority": 90,
+    "requirements": {
+      "storyStageMin": 1,
+      "storyStageMax": 1,
+      "notInvestigated": ["weeding"]
+    },
+    "text": "水田里好像有人在干活"
+  },
+  {
+    "id": "stage1_potato",
+    "priority": 80,
+    "requirements": {
+      "storyStageMin": 1,
+      "storyStageMax": 1,
+      "notInvestigated": ["potato_sorting"]
+    },
+    "text": "有人在分选收获的作物"
+  },
+  {
+    "id": "stage1_water_surface",
+    "priority": 70,
+    "requirements": {
+      "storyStageMin": 1,
+      "storyStageMax": 1,
+      "notInvestigated": ["water_surface"]
+    },
+    "text": "河面上好像有什么"
+  },
+  {
+    "id": "stage2_talk_to_residents",
+    "priority": 270,
+    "requirements": {
+      "storyStageMin": 2,
+      "storyStageMax": 2,
+      "currentMapIn": ["harie_outside", "harie_community_center"],
+      "notPlayedDialogGroups": [
+        { "npcId": "npc2", "groupId": "first_meeting" }
+      ]
+    },
+    "text": "坐公交去村里走走，和当地居民聊聊吧"
+  },
+  {
+    "id": "stage2_return_to_ishizu",
+    "priority": 280,
+    "requirements": {
+      "storyStageMin": 2,
+      "storyStageMax": 2,
+      "currentMapIn": ["harie_outside", "harie_community_center"],
+      "playedDialogGroups": [
+        { "npcId": "npc2", "groupId": "first_meeting" }
+      ],
+      "notPlayedDialogGroups": [
+        { "npcId": "npc1", "groupId": "after_free_exploration" }
+      ]
+    },
+    "text": "肚子有点饿了\n去问问石津吧"
+  },
+  {
+    "id": "stage4_water_grass",
+    "priority": 250,
+    "requirements": {
+      "storyStageMin": 4,
+      "storyStageMax": 4,
+      "notInvestigated": ["water_grass"]
+    },
+    "text": "回大川看看吧"
+  },
+  {
+    "id": "stage3_community_board",
+    "priority": 250,
+    "requirements": {
+      "storyStageMin": 3,
+      "storyStageMax": 3,
+      "currentMap": "harie_community_center",
+      "notInvestigated": ["community_board"]
+    },
+    "text": "去看看公告栏吧"
+  },
+  {
+    "id": "stage3_old_house",
+    "priority": 240,
+    "requirements": {
+      "storyStageMin": 3,
+      "storyStageMax": 3,
+      "investigated": ["community_board"],
+      "notInvestigated": ["old_house"]
+    },
+    "text": "去看看那栋空房子吧"
+  },
+  {
+    "id": "stage4_okawa",
+    "priority": 240,
+    "requirements": {
+      "storyStageMin": 4,
+      "storyStageMax": 4,
+      "investigated": ["okawa"],
+      "notInvestigated": ["okawa"]
+    },
+    "text": "去和大川旁边的孩子们聊聊吧"
+  },
+  {
+    "id": "stage4_ending",
+    "priority": 230,
+    "requirements": {
+      "storyStageMin": 4,
+      "storyStageMax": 4,
+      "investigated": ["water_grass"]
+    },
+    "text": "去和石津先生搭话吧"
+  },
+  {
+    "id": "stage3_free_explore",
+    "priority": 50,
+    "requirements": {
+      "storyStageMin": 3,
+      "storyStageMax": 3
+    },
+    "text": "离天黑还有一段时间\n去社区中心那边散散步吧"
+  }
+]

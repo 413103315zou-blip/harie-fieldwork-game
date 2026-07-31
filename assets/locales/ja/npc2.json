@@ -1,0 +1,165 @@
+{
+  "dialogGroups": [
+    {
+      "id": "first_meeting",
+      "role": "first_meeting",
+      "askable": false,
+      "requirements": {
+        "storyStageMin": 0
+      },
+      "once": true,
+      "played": false,
+      "priority": 100,
+      "dialogs": [
+        { "speaker": "machi", "text": "こんにちは。何を見ているんですか。" },
+        { "speaker": "oldman", "text": "何というほどでもないや。" },
+        { "speaker": "oldman", "text": "ここに座って、水の音を聞いているだけだ。" },
+        { "speaker": "machi", "text": "毎日ここに来るんですか。" },
+        { "speaker": "oldman", "text": "昔から、この音を聞くと落ち着くんだや。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "after_okawa_surface",
+      "role": "question",
+      "askable": true,
+      "questionTitle": "大川の水面について",
+      "requirements": {
+        "storyStageMin": 1,
+        "investigated": ["water_surface"]
+      },
+      "once": true,
+      "played": false,
+      "priority": 90,
+      "dialogs": [
+        { "speaker": "oldman", "text": "大川の水面、見てきたか。" },
+        { "speaker": "machi", "text": "はい。光が反射して、とても綺麗でした。" },
+        { "speaker": "oldman", "text": "あの水面は毎日違って見えるんだ。" },
+        { "speaker": "machi", "text": "毎日？天気で変わるということですか。" },
+        { "speaker": "oldman", "text": "ああ。季節でも変わるし、時間帯でも変わる。" },
+        { "speaker": "oldman", "text": "水温はいつも変わらずの12℃ぐらいけどね。" },
+        { "speaker": "oldman", "text": "長く見ていると、水がどう動いているか分かってくるよ。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [
+        {
+          "fragmentId": "water_surface",
+          "memo": "水面は毎日違って見える。天気や季節で変わる",
+          "quote": "長く見ていると、水がどう動いているか分かってくるよ",
+          "speaker": "oldman"
+        }
+      ],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "stage1_default",
+      "role": "default",
+      "askable": false,
+      "requirements": {
+        "storyStageMin": 0
+      },
+      "once": false,
+      "played": false,
+      "priority": 0,
+      "dialogs": [
+        { "speaker": "oldman", "text": "水の音を聞いていると落ち着くやんな。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "after_community_board",
+      "role": "question",
+      "askable": true,
+      "questionTitle": "祭りについて",
+      "requirements": {
+        "storyStageMin": 3,
+        "investigated": ["community_board"]
+      },
+      "once": true,
+      "played": false,
+      "priority": 85,
+      "dialogs": [
+        { "speaker": "oldman", "text": "掲示板のポスター、見たかい。" },
+        { "speaker": "machi", "text": "はい。高島踊りというお祭りですね。" },
+        { "speaker": "oldman", "text": "昔はこの踊りのために、村中が集まったものだ。" },
+        { "speaker": "oldman", "text": "踊りが終わると、川辺で皆で酒を酌み交わしたよ。" },
+        { "speaker": "machi", "text": "今はもうやらないんですか。" },
+        { "speaker": "oldman", "text": "今も続いてるよ。毎年やってるイベントなんや。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [
+        {
+          "fragmentId": "community_board",
+          "memo": "高島踊りはかつて村中が集まる祭りだった",
+          "quote": "昔はこの踊りのために、村中が集まったものだ",
+          "speaker": "oldman"
+        }
+      ],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "after_water_grass_stage4",
+      "role": "question",
+      "askable": true,
+      "questionTitle": "水は巡る",
+      "requirements": {
+        "storyStageMin": 4,
+        "investigated": ["water_grass"]
+      },
+      "once": true,
+      "played": false,
+      "priority": 75,
+      "dialogs": [
+        { "speaker": "oldman", "text": "水草の流れ、見てきたか。" },
+        { "speaker": "machi", "text": "はい。水がずっと同じ方向に流れていました。" },
+        { "speaker": "oldman", "text": "あの水はやがて琵琶湖へ注ぎ、そして空へ還る。" },
+        { "speaker": "oldman", "text": "雨となって山に降り、またこの川に戻ってくる。" },
+        { "speaker": "machi", "text": "水はずっと巡っているんですね。" },
+        { "speaker": "oldman", "text": "水は巡る。人も、いつかは戻ってくるものだよ。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [
+        {
+          "fragmentId": "water_grass",
+          "memo": "水は琵琶湖へ注ぎ、雨となって山に戻る循環",
+          "quote": "水は巡る。人も、いつかは戻ってくるものだよ",
+          "speaker": "oldman"
+        }
+      ],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "future_placeholder",
+      "role": "default",
+      "askable": false,
+      "requirements": {
+        "storyStageMin": 99
+      },
+      "once": true,
+      "played": false,
+      "priority": 0,
+      "dialogs": [
+        { "speaker": "oldman", "text": "…" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    }
+  ]
+}

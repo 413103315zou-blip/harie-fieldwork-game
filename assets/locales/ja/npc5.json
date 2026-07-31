@@ -1,0 +1,132 @@
+{
+  "dialogGroups": [
+    {
+      "id": "first_meeting",
+      "role": "first_meeting",
+      "askable": false,
+      "requirements": {
+        "storyStageMin": 0
+      },
+      "once": true,
+      "played": false,
+      "priority": 100,
+      "dialogs": [
+        { "speaker": "child2", "text": "あそこ、誰も入ったらだめな秘密基地なんだ。" },
+        { "speaker": "machi", "text": "秘密基地？" },
+        { "speaker": "child2", "text": "水音がする穴から覗くと、鯉がいっぱいいるんだよ。" },
+        { "speaker": "machi", "text": "鯉がいっぱい？" },
+        { "speaker": "child2", "text": "大人には内緒だよ。約束だよ。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "after_potato_sorting",
+      "role": "question",
+      "askable": true,
+      "questionTitle": "ジャガイモについて",
+      "requirements": {
+        "storyStageMin": 1,
+        "investigated": ["potato_sorting"]
+      },
+      "once": true,
+      "played": false,
+      "priority": 90,
+      "dialogs": [
+        { "speaker": "child2", "text": "ジャガイモの選別、見た？" },
+        { "speaker": "machi", "text": "うん。大きいのと小さいのを分けてたね。" },
+        { "speaker": "child1", "text": "形も大きさもみんな違うんだよ。" },
+        { "speaker": "child2", "text": "簡単そうに見えるけど、ちゃんと見ないといけないんだ。" },
+        { "speaker": "child1", "text": "僕も手伝ったことあるよ。目が疲れるんだ。" },
+        { "speaker": "machi", "text": "そうなんだ。大変な作業なんだね。" },
+        { "speaker": "child2", "text": "でも、分け終わった後は気持ちいいんだよ。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [
+        {
+          "fragmentId": "potato_sorting",
+          "memo": "形も大きさもみんな違う。ちゃんと見ないといけない",
+          "quote": "ちゃんと見ないといけないんだ",
+          "speaker": "child2"
+        }
+      ],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "stage1_default",
+      "role": "default",
+      "askable": false,
+      "requirements": {
+        "storyStageMin": 0
+      },
+      "once": false,
+      "played": false,
+      "priority": 0,
+      "dialogs": [
+        { "speaker": "child2", "text": "また遊びに来たの？" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "after_old_house",
+      "role": "question",
+      "askable": true,
+      "questionTitle": "帰ってくる人",
+      "requirements": {
+        "storyStageMin": 3,
+        "investigated": ["old_house"]
+      },
+      "once": true,
+      "played": false,
+      "priority": 80,
+      "dialogs": [
+        { "speaker": "child2", "text": "お兄ちゃん、今年も帰ってこなかったんだ。" },
+        { "speaker": "machi", "text": "お兄ちゃん？" },
+        { "speaker": "child2", "text": "昔、一緒にあの家で遊んでたんだけど。" },
+        { "speaker": "child2", "text": "でも、水は変わらず流れてるんだよ。" },
+        { "speaker": "child1", "text": "おじいちゃんが言ってた。水がある限り、いつかは戻ってくるって。" },
+        { "speaker": "machi", "text": "そうなんだ……。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [
+        {
+          "fragmentId": "old_house",
+          "memo": "帰ってこない人もいる。でも水は変わらず流れている",
+          "quote": "水がある限り、いつかは戻ってくるって、おじいちゃんが言ってた",
+          "speaker": "child1"
+        }
+      ],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "future_placeholder",
+      "role": "default",
+      "askable": false,
+      "requirements": {
+        "storyStageMin": 99
+      },
+      "once": true,
+      "played": false,
+      "priority": 0,
+      "dialogs": [
+        { "speaker": "child2", "text": "…" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    }
+  ]
+}

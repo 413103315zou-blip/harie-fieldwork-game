@@ -1,0 +1,165 @@
+{
+  "dialogGroups": [
+    {
+      "id": "first_meeting",
+      "role": "first_meeting",
+      "askable": false,
+      "requirements": {
+        "storyStageMin": 0
+      },
+      "once": true,
+      "played": false,
+      "priority": 100,
+      "dialogs": [
+        { "speaker": "machi", "text": "你好。您在看什么呢？" },
+        { "speaker": "oldman", "text": "也没什么。" },
+        { "speaker": "oldman", "text": "就是坐在这里，听听水声。" },
+        { "speaker": "machi", "text": "您每天都来这里吗？" },
+        { "speaker": "oldman", "text": "从以前开始，听到这个声音就安心。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "after_okawa_surface",
+      "role": "question",
+      "askable": true,
+      "questionTitle": "关于大川的水面",
+      "requirements": {
+        "storyStageMin": 1,
+        "investigated": ["water_surface"]
+      },
+      "once": true,
+      "played": false,
+      "priority": 90,
+      "dialogs": [
+        { "speaker": "oldman", "text": "大川的水面，看过了吗？" },
+        { "speaker": "machi", "text": "嗯。光线反射在上面，非常漂亮。" },
+        { "speaker": "oldman", "text": "那个水面每天看起来都不一样。" },
+        { "speaker": "machi", "text": "每天？是说随天气变化吗？" },
+        { "speaker": "oldman", "text": "嗯。季节会变，时间段也会变。" },
+        { "speaker": "oldman", "text": "水温倒是始终不变，大概12℃左右。" },
+        { "speaker": "oldman", "text": "看久了，就能明白水是怎么流动的。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [
+        {
+          "fragmentId": "water_surface",
+          "memo": "水面每天看起来不同。随天气和季节变化",
+          "quote": "看久了，就能明白水是怎么流动的",
+          "speaker": "oldman"
+        }
+      ],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "stage1_default",
+      "role": "default",
+      "askable": false,
+      "requirements": {
+        "storyStageMin": 0
+      },
+      "once": false,
+      "played": false,
+      "priority": 0,
+      "dialogs": [
+        { "speaker": "oldman", "text": "听着水声就安心啊。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "after_community_board",
+      "role": "question",
+      "askable": true,
+      "questionTitle": "关于祭典",
+      "requirements": {
+        "storyStageMin": 3,
+        "investigated": ["community_board"]
+      },
+      "once": true,
+      "played": false,
+      "priority": 85,
+      "dialogs": [
+        { "speaker": "oldman", "text": "公告栏的海报，看到了吗？" },
+        { "speaker": "machi", "text": "嗯。是叫高岛舞（高島踊り）的祭典吧。" },
+        { "speaker": "oldman", "text": "从前为了这个舞蹈，全村人都会聚在一起。" },
+        { "speaker": "oldman", "text": "跳完舞，大家就在河边一起喝酒。" },
+        { "speaker": "machi", "text": "现在已经不办了吗？" },
+        { "speaker": "oldman", "text": "现在也在继续哦，每年都会举办的活动。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [
+        {
+          "fragmentId": "community_board",
+          "memo": "高岛舞曾是全村人聚在一起的祭典",
+          "quote": "从前为了这个舞蹈，全村人都会聚在一起",
+          "speaker": "oldman"
+        }
+      ],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "after_water_grass_stage4",
+      "role": "question",
+      "askable": true,
+      "questionTitle": "水在循环",
+      "requirements": {
+        "storyStageMin": 4,
+        "investigated": ["water_grass"]
+      },
+      "once": true,
+      "played": false,
+      "priority": 75,
+      "dialogs": [
+        { "speaker": "oldman", "text": "水草的流向，看过了吗？" },
+        { "speaker": "machi", "text": "嗯。水一直在朝同一个方向流。" },
+        { "speaker": "oldman", "text": "那些水最终会汇入琵琶湖，然后回归天空。" },
+        { "speaker": "oldman", "text": "化作雨落在山上，又回到这条河里。" },
+        { "speaker": "machi", "text": "水一直在循环呢。" },
+        { "speaker": "oldman", "text": "水在循环。人也是，总有一天会回来的。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [
+        {
+          "fragmentId": "water_grass",
+          "memo": "水汇入琵琶湖，化作雨回到山的循环",
+          "quote": "水在循环。人也是，总有一天会回来的",
+          "speaker": "oldman"
+        }
+      ],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "future_placeholder",
+      "role": "default",
+      "askable": false,
+      "requirements": {
+        "storyStageMin": 99
+      },
+      "once": true,
+      "played": false,
+      "priority": 0,
+      "dialogs": [
+        { "speaker": "oldman", "text": "…" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    }
+  ]
+}

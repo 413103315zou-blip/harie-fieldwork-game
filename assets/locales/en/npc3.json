@@ -1,0 +1,158 @@
+{
+  "dialogGroups": [
+    {
+      "id": "first_meeting",
+      "role": "first_meeting",
+      "askable": false,
+      "requirements": {
+        "storyStageMin": 0
+      },
+      "once": true,
+      "played": false,
+      "priority": 100,
+      "dialogs": [
+        { "speaker": "koi", "text": "Why are you staring at me like that?" },
+        { "speaker": "machi", "text": "Wait... the koi just talked...?" },
+        { "speaker": "koi", "text": "Stay in this water long enough, and you'll learn to speak a little too." },
+        { "speaker": "koi", "text": "First, take a good look at the flow of the water." },
+        { "speaker": "machi", "text": "The flow of the water...?" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "after_water_grass",
+      "role": "question",
+      "askable": true,
+      "questionTitle": "About the Water Grass",
+      "requirements": {
+        "storyStageMin": 1,
+        "investigated": ["water_grass"]
+      },
+      "once": true,
+      "played": false,
+      "priority": 90,
+      "dialogs": [
+        { "speaker": "koi", "text": "Did you see the water grass swaying?" },
+        { "speaker": "machi", "text": "Yes. The surface was calm, but the grass was swaying gently beneath." },
+        { "speaker": "koi", "text": "Even when the surface is still, the water never stops flowing." },
+        { "speaker": "machi", "text": "Now that you mention it, all the grass was swaying in the same direction." },
+        { "speaker": "koi", "text": "That direction is the way the water flows." },
+        { "speaker": "koi", "text": "Watch the swaying of the grass, and you'll understand how the water moves." }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [
+        {
+          "fragmentId": "water_grass",
+          "memo": "Even when the surface is calm, the water never stops flowing.",
+          "quote": "Watch the swaying of the grass, and you'll understand how the water moves.",
+          "speaker": "koi"
+        }
+      ],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "after_okawa_surface",
+      "role": "question",
+      "askable": true,
+      "questionTitle": "About the Flow of Water",
+      "requirements": {
+        "storyStageMin": 1,
+        "investigated": ["water_surface"]
+      },
+      "once": true,
+      "played": false,
+      "priority": 80,
+      "dialogs": [
+        { "speaker": "koi", "text": "Did you see the surface of the Okawa River?" },
+        { "speaker": "machi", "text": "Yes. The light reflecting off it was beautiful." },
+        { "speaker": "koi", "text": "The shimmer on the surface is proof that the water is moving." },
+        { "speaker": "machi", "text": "Moving...?" },
+        { "speaker": "koi", "text": "At a speed you can't see, the water is always flowing." },
+        { "speaker": "koi", "text": "Gaze at the surface long enough, and you'll begin to see its movement." }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [
+        {
+          "fragmentId": "water_surface",
+          "memo": "The shimmer on the surface is proof that the water is moving.",
+          "quote": "Gaze at the surface long enough, and you'll begin to see its movement.",
+          "speaker": "koi"
+        }
+      ],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "stage1_default",
+      "role": "default",
+      "askable": false,
+      "requirements": {
+        "storyStageMin": 0
+      },
+      "once": false,
+      "played": false,
+      "priority": 0,
+      "dialogs": [
+        { "speaker": "koi", "text": "The water is especially clear today." }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "after_hostel_loop",
+      "role": "question",
+      "askable": true,
+      "questionTitle": "About the Inn's Water",
+      "requirements": {
+        "storyStageMin": 2,
+        "storyStageMax": 2,
+        "currentMap": "harie_room",
+        "investigated": ["foyer", "table", "poolroom", "pool", "rice", "soup", "kitchen"]
+      },
+      "once": true,
+      "played": false,
+      "priority": 400,
+      "dialogs": [
+        { "speaker": "koi", "text": "After seeing the inside of the inn, it seems you understand how water sustains daily life." },
+        { "speaker": "machi", "text": "Yes. The same water was used for cooking and all other daily needs." },
+        { "speaker": "machi", "text": "I've never seen this kind of water circulation system anywhere else." },
+        { "speaker": "koi", "text": "That's right. This is the unique relationship between people and nature that you'll only find in Harie." },
+        { "speaker": "koi", "text": "Pulling this off isn't easy, you know." }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": 3
+    },
+    {
+      "id": "future_placeholder",
+      "role": "default",
+      "askable": false,
+      "requirements": {
+        "storyStageMin": 99
+      },
+      "once": true,
+      "played": false,
+      "priority": 0,
+      "dialogs": [
+        { "speaker": "koi", "text": "…" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    }
+  ]
+}

@@ -1,0 +1,223 @@
+[
+  {
+    "id": "stage5_final_dialog",
+    "priority": 600,
+    "requirements": {
+      "storyStageMin": 5,
+      "storyStageMax": 5,
+      "endingFragmentsComplete": true
+    },
+    "text": "石津が何か話したそうだ"
+  },
+  {
+    "id": "stage5_free_explore",
+    "priority": 500,
+    "requirements": {
+      "storyStageMin": 5,
+      "storyStageMax": 5,
+      "endingFragmentsComplete": false
+    },
+    "text": "自由調査です\n回ってみてください"
+  },
+  {
+    "id": "stage2_hostel_hint",
+    "priority": 250,
+    "requirements": {
+      "storyStageMin": 2,
+      "storyStageMax": 2,
+      "currentMap": "harie_outside",
+      "playedDialogGroups": [
+        { "npcId": "npc1", "groupId": "after_free_exploration" }
+      ],
+      "notInvestigated": ["hostel"]
+    },
+    "text": "宿の近くを見てみよう"
+  },
+  {
+    "id": "stage2_enter_hostel",
+    "priority": 250,
+    "requirements": {
+      "storyStageMin": 2,
+      "storyStageMax": 2,
+      "currentMap": "harie_outside",
+      "playedDialogGroups": [
+        { "npcId": "npc1", "groupId": "after_free_exploration" }
+      ],
+      "investigated": ["hostel"]
+    },
+    "text": "宿の中に入ってみよう"
+  },
+  {
+    "id": "stage2_talk_to_ishizu",
+    "priority": 270,
+    "requirements": {
+      "storyStageMin": 2,
+      "storyStageMax": 2,
+      "currentMap": "harie_outside",
+      "playedDialogGroups": [
+        { "npcId": "npc3", "groupId": "after_hostel_loop" }
+      ]
+    },
+    "text": "村を歩いて、住んでいる人に話を聞いてみよう"
+  },
+  {
+    "id": "room_foyer_hint",
+    "priority": 260,
+    "requirements": {
+      "currentMap": "harie_room",
+      "notInvestigated": ["foyer"]
+    },
+    "text": "宿の中を見て回ろう"
+  },
+  {
+    "id": "room_table_hint",
+    "priority": 250,
+    "requirements": {
+      "currentMap": "harie_room",
+      "investigated": ["foyer"],
+      "notInvestigated": ["table"]
+    },
+    "text": "テーブルの上に何かが置かれているようだ"
+  },
+  {
+    "id": "room_poolroom_hint",
+    "priority": 240,
+    "requirements": {
+      "currentMapIn": ["harie_room"],
+      "investigated": ["foyer", "table"],
+      "notInvestigated": ["poolroom"]
+    },
+    "text": "奥から水の音が聞こえる"
+  },
+  {
+    "id": "stage1_field",
+    "priority": 100,
+    "requirements": {
+      "storyStageMin": 1,
+      "storyStageMax": 1,
+      "notInvestigated": ["field"]
+    },
+    "text": "田んぼをよく見てみよう"
+  },
+  {
+    "id": "stage1_weeding",
+    "priority": 90,
+    "requirements": {
+      "storyStageMin": 1,
+      "storyStageMax": 1,
+      "notInvestigated": ["weeding"]
+    },
+    "text": "田んぼでは何か作業をしているようだ"
+  },
+  {
+    "id": "stage1_potato",
+    "priority": 80,
+    "requirements": {
+      "storyStageMin": 1,
+      "storyStageMax": 1,
+      "notInvestigated": ["potato_sorting"]
+    },
+    "text": "収穫した作物を選んでいる人がいる"
+  },
+  {
+    "id": "stage1_water_surface",
+    "priority": 70,
+    "requirements": {
+      "storyStageMin": 1,
+      "storyStageMax": 1,
+      "notInvestigated": ["water_surface"]
+    },
+    "text": "川の水面には何かありそう"
+  },
+  {
+    "id": "stage2_talk_to_residents",
+    "priority": 270,
+    "requirements": {
+      "storyStageMin": 2,
+      "storyStageMax": 2,
+      "currentMapIn": ["harie_outside", "harie_community_center"],
+      "notPlayedDialogGroups": [
+        { "npcId": "npc2", "groupId": "first_meeting" }
+      ]
+    },
+    "text": "バスで村を歩き、住んでいる人に話を聞いてみよう"
+  },
+  {
+    "id": "stage2_return_to_ishizu",
+    "priority": 280,
+    "requirements": {
+      "storyStageMin": 2,
+      "storyStageMax": 2,
+      "currentMapIn": ["harie_outside", "harie_community_center"],
+      "playedDialogGroups": [
+        { "npcId": "npc2", "groupId": "first_meeting" }
+      ],
+      "notPlayedDialogGroups": [
+        { "npcId": "npc1", "groupId": "after_free_exploration" }
+      ]
+    },
+    "text": "少しお腹が空きました\n石津に聞きに行こう"
+  },
+  {
+    "id": "stage4_water_grass",
+    "priority": 250,
+    "requirements": {
+      "storyStageMin": 4,
+      "storyStageMax": 4,
+      "notInvestigated": ["water_grass"]
+    },
+    "text": "大川へ戻ってみよう"
+  },
+  {
+    "id": "stage3_community_board",
+    "priority": 250,
+    "requirements": {
+      "storyStageMin": 3,
+      "storyStageMax": 3,
+      "currentMap": "harie_community_center",
+      "notInvestigated": ["community_board"]
+    },
+    "text": "掲示板を見てみよう"
+  },
+  {
+    "id": "stage3_old_house",
+    "priority": 240,
+    "requirements": {
+      "storyStageMin": 3,
+      "storyStageMax": 3,
+      "investigated": ["community_board"],
+      "notInvestigated": ["old_house"]
+    },
+    "text": "空き家を見てみよう"
+  },
+  {
+    "id": "stage4_okawa",
+    "priority": 240,
+    "requirements": {
+      "storyStageMin": 4,
+      "storyStageMax": 4,
+      "investigated": ["okawa"],
+      "notInvestigated": ["okawa"]
+    },
+    "text": "大川のそばにいる子供たちに話を聞いてみよう"
+  },
+  {
+    "id": "stage4_ending",
+    "priority": 230,
+    "requirements": {
+      "storyStageMin": 4,
+      "storyStageMax": 4,
+      "investigated": ["water_grass"]
+    },
+    "text": "石津さんに話しかけてみよう"
+  },
+  {
+    "id": "stage3_free_explore",
+    "priority": 50,
+    "requirements": {
+      "storyStageMin": 3,
+      "storyStageMax": 3
+    },
+    "text": "まだ暗くなるまでには時間がありますし\nコミュニティセンターの方へ散歩に行こう"
+  }
+]

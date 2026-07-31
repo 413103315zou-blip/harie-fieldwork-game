@@ -1,0 +1,99 @@
+{
+  "ending": {
+    "authorName": "Ziqi",
+    "narrationWaterMemory": "針江の水は、幾千の風景を熬り、一筋の記憶とした。\n（针江的流水，将万千风景熬成回忆。）",
+    "narrationFallenPetals": "花びらは土に還り、根を養い、来る年にはまた新たな花を咲かせる。\n（落英入土，滋养根系，来年还会开出新的花。）",
+    "narrationRiversReturn": "百川海に入り、逝く者は斯くの如し。\nされど、なお雲を積みて雨となり、山川に還る。\n（百川入海，逝者如斯，仍能积云成雨，回反山川。）",
+    "narrationTwelveDegreeWater": "あの十二度の水は、冷たさの中に温もりを隠し、\n（那十二度的水，在冰冷中藏着温热，）",
+    "narrationTravelers": "去りゆく者の背中を押し、帰り来る者の喉を潤す。\n（推着远行人的背，润着归来人的喉。）",
+    "narrationWaterKeepsAsking": "村は空になろうとも、水は問い続ける——\n（纵使村庄成空，水仍会反复叩问——）",
+    "narrationWhereToReturn": "「お前は、どこで生き、どこに還りたいのか。」\n（“你，要在哪里活着，又想回到哪里去。”）",
+    "narrationEternalHome": "水音が絶えぬ限り、この地は永遠に、誰かの故郷であり続ける。\n（只要水声未绝，这片土地，便永远是某个人的归处。）",
+    "investigationComplete": "------ 針江、調査完了 ------",
+    "thanksForPlaying": "Thanks for playing.",
+    "authorCommentPrompt": "E：作者コメントへ",
+    "authorCommentFallback": "作者コメントはまだ準備中です。"
+  },
+  "specialThanks": {
+    "credits": "特別感謝\n\n作者：Ziqi\n協力作者：西岡莉々子 \n多言語翻訳ツール：ChatGPT WorkBuddy\nイラストサポーター：小太陽(友人A)\nBGM制作：Lil $pider(幼馴染)\nプログラミングツール：Visual Studio Code \nペイントツール：Photoshop、Tiled\n現地協力：石津大輔"
+  },
+  "characters": {
+    "ishizu": "石津",
+    "oldMan": "おじさん",
+    "koi": "鯉",
+    "childA": "子供A",
+    "childB": "子供B",
+    "machi": "マチちゃん"
+  },
+  "menu": {
+    "title": "針江さんぽ",
+    "newGame": "新ゲーム",
+    "settingsButton": "設定",
+    "continue": "続ける",
+    "settingsTitle": "設定",
+    "bgmLabel": "音楽",
+    "seLabel": "効果音",
+    "languageLabel": "言語",
+    "back": "戻る"
+  },
+  "tutorial": {
+    "notebook": "F：メモ",
+    "confirmNotebook": "← Fキーで確認",
+    "moveNotebookPage": "← →  ページ移動",
+    "moveUp": "↑",
+    "moveLeft": "←",
+    "moveDown": "↓",
+    "moveRight": "→"
+  },
+  "npcMenu": {
+    "talk": "話す",
+    "askInvestigation": "調査について聞く",
+    "later": "またあとで",
+    "investigationFallback": "調査について",
+    "back": "もどる",
+    "pageIndicator": "◀ {current} / {total} ▶",
+    "selectedItem": "▶ {label}"
+  },
+  "investigation": {
+    "noData": "データなし",
+    "alreadyInvestigated": "再調査です",
+    "missingPhoto": "写真なし",
+    "missingVideo": "動画なし",
+    "missingAudio": "音声なし"
+  },
+  "notebook": {
+    "pageIndicator": "{current} / {total}",
+    "navigation": "←/→ 翻页   F / ESC 关闭",
+    "firstPageStatus": "   （最初のページです）",
+    "lastPageStatus": "   (已是最后一页)",
+    "peopleDataMissing": "（最後のページです）",
+    "peopleTitle": "人物",
+    "missingPersonName": "???",
+    "bookmarksTitle": "しおり",
+    "noRecords": "まだ記録がありません",
+    "fragmentListItem": "✓ {title}",
+    "quote": "「{quote}」",
+    "speaker": "— {speaker}",
+    "location": "場所：{location}",
+    "date": "日付：{date}"
+  },
+  "monologue": {
+    "freeExplorationHungry": "いろいろ歩いたら、少しお腹が空いてきた。",
+    "freeExplorationAskIshizu": "石津さんに、この辺りで食べられるものを聞いてみよう。"
+  },
+  "storyHints": {
+    "npcWantsToTalk": "{name}が何か話したそうだ"
+  },
+  "dialog": {
+    "fallback": {
+      "noticeSomething": "また何か気づいたら、話してください。",
+      "ellipsis": "…",
+      "hello": "こんにちは"
+    }
+  },
+  "system": {
+    "interactPrompt": "E",
+    "memoUpdated": "メモ更新済み",
+    "percentage": "{value}%"
+  }
+}

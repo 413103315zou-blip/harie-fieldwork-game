@@ -1,0 +1,36 @@
+{
+  "events": [
+    {
+      "fragmentId": "field",
+      "notifyNpcIds": ["npc1"]
+    },
+    {
+      "fragmentId": "weeding",
+      "notifyNpcIds": ["npc1", "npc4"]
+    },
+    {
+      "fragmentId": "potato_sorting",
+      "notifyNpcIds": ["npc1", "npc5"]
+    },
+    {
+      "fragmentId": "water_grass",
+      "notifyNpcIds": ["npc3", "npc2"]
+    },
+    {
+      "fragmentId": "water_surface",
+      "notifyNpcIds": ["npc2"]
+    },
+    {
+      "fragmentId": "community_board",
+      "notifyNpcIds": ["npc2"]
+    },
+    {
+      "fragmentId": "old_house",
+      "notifyNpcIds": ["npc4", "npc5"]
+    },
+    {
+      "fragmentId": "okawa",
+      "notifyNpcIds": ["npc4"]
+    }
+  ]
+}

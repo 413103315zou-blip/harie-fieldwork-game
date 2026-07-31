@@ -1,0 +1,61 @@
+{
+  "initialStoryStage": 0,
+  "endingFragments": [
+    "rice_seedling",
+    "history",
+    "community_center"
+  ],
+  "endingAvailableFragments": [
+    "rice_seedling",
+    "history",
+    "community_center",
+    "flower1",
+    "flower2"
+  ],
+  "endingRequiredFragments": [
+    "rice_seedling",
+    "history",
+    "community_center"
+  ],
+  "endingCG": {
+    "image": "ending_cg.png",
+    "duration": 5000
+  },
+  "warpRequirements": {
+    "harie_community_center": {
+      "storyStageMin": 2
+    }
+  },
+  "prologue": {
+    "autoPlay": true,
+    "dialogs": [
+      { "speaker": "narrator", "text": "针江——琵琶湖畔的水之聚落。" },
+      { "speaker": "narrator", "text": "涌泉水终年冰凉。无论寒暑，始终如一。" },
+      { "speaker": "narrator", "text": "这水，支撑着人们的生活。" },
+      { "speaker": "narrator", "text": "今天，一位旅人来到了这个村庄。" },
+      { "speaker": "machi", "text": "这里就是滋贺县的针江吗？" },
+      { "speaker": "machi", "text": "为什么连公交站都这么安静呢……\n只有水声听起来格外清晰。" },
+      { "speaker": "machi", "text": "那边那位就是这家旅馆的负责人吗？先去打个招呼吧" }
+    ]
+  },
+  "investigationTriggers": [
+    {
+      "fragmentId": "hostel",
+      "setStoryStage": 2
+    },
+    {
+      "fragmentId": "community_board",
+      "requirements": {
+        "investigated": ["community_board", "old_house"]
+      },
+      "setStoryStage": 4
+    },
+    {
+      "fragmentId": "old_house",
+      "requirements": {
+        "investigated": ["community_board", "old_house"]
+      },
+      "setStoryStage": 4
+    }
+  ]
+}

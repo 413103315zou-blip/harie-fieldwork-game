@@ -1,0 +1,99 @@
+{
+  "ending": {
+    "authorName": "Ziqi",
+    "narrationWaterMemory": "针江的流水，将万千风景熬成回忆。",
+    "narrationFallenPetals": "落英入土，滋养根系，来年还会开出新的花。",
+    "narrationRiversReturn": "百川入海，逝者如斯。\n仍能积云成雨，回反山川。",
+    "narrationTwelveDegreeWater": "那十二度的水，在冰冷中藏着温热，",
+    "narrationTravelers": "推着远行人的背，润着归来人的喉。",
+    "narrationWaterKeepsAsking": "纵使村庄成空，水仍会反复叩问——",
+    "narrationWhereToReturn": "\u201c你，要在哪里活着，又想回到哪里去。\u201d",
+    "narrationEternalHome": "只要水声未绝，这片土地，便永远是某个人的归处。",
+    "investigationComplete": "------ 针江，调查完成 ------",
+    "thanksForPlaying": "Thanks for playing.",
+    "authorCommentPrompt": "E：作者寄语",
+    "authorCommentFallback": "作者寄语还在准备中。"
+  },
+  "specialThanks": {
+    "credits": "特别感谢\n\n作者：Ziqi\n多语言翻译工具：ChatGPT WorkBuddy\n协力作者：西冈莉々子 \n插画支持：小太阳(友人A)\nBGM制作：Lil $pider(发小)\n编程工具：Visual Studio Code \n绘画工具：Photoshop、Tiled\n当地协力：石津大辅"
+  },
+  "characters": {
+    "ishizu": "石津",
+    "oldMan": "老伯",
+    "koi": "鲤鱼",
+    "childA": "孩子A",
+    "childB": "孩子B",
+    "machi": "玛琪"
+  },
+  "menu": {
+    "title": "针江散步（針江さんぽ）",
+    "newGame": "新游戏",
+    "settingsButton": "设置",
+    "continue": "继续游戏",
+    "settingsTitle": "设置",
+    "bgmLabel": "音乐",
+    "seLabel": "音效",
+    "languageLabel": "语言",
+    "back": "返回"
+  },
+  "tutorial": {
+    "notebook": "F：笔记",
+    "confirmNotebook": "← 按F键确认",
+    "moveNotebookPage": "← →  翻页",
+    "moveUp": "↑",
+    "moveLeft": "←",
+    "moveDown": "↓",
+    "moveRight": "→"
+  },
+  "npcMenu": {
+    "talk": "交谈",
+    "askInvestigation": "询问调查",
+    "later": "稍后再说",
+    "investigationFallback": "关于调查",
+    "back": "返回",
+    "pageIndicator": "◀ {current} / {total} ▶",
+    "selectedItem": "▶ {label}"
+  },
+  "investigation": {
+    "noData": "暂无数据",
+    "alreadyInvestigated": "已调查过",
+    "missingPhoto": "无照片",
+    "missingVideo": "无视频",
+    "missingAudio": "无音频"
+  },
+  "notebook": {
+    "pageIndicator": "{current} / {total}",
+    "navigation": "←/→ 翻页   F / ESC 关闭",
+    "firstPageStatus": "   （第一页）",
+    "lastPageStatus": "   (已是最后一页)",
+    "peopleDataMissing": "（最后一页）",
+    "peopleTitle": "人物",
+    "missingPersonName": "???",
+    "bookmarksTitle": "书签",
+    "noRecords": "暂无记录",
+    "fragmentListItem": "✓ {title}",
+    "quote": "\u201c{quote}\u201d",
+    "speaker": "— {speaker}",
+    "location": "地点：{location}",
+    "date": "日期：{date}"
+  },
+  "monologue": {
+    "freeExplorationHungry": "走了不少路，肚子有点饿了。",
+    "freeExplorationAskIshizu": "去问问石津先生，这附近有什么能吃的吧。"
+  },
+  "storyHints": {
+    "npcWantsToTalk": "{name}似乎想说些什么"
+  },
+  "dialog": {
+    "fallback": {
+      "noticeSomething": "发现了什么的话，请告诉我。",
+      "ellipsis": "…",
+      "hello": "你好"
+    }
+  },
+  "system": {
+    "interactPrompt": "E",
+    "memoUpdated": "笔记已更新",
+    "percentage": "{value}%"
+  }
+}

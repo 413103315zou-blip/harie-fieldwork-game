@@ -1,0 +1,99 @@
+{
+  "ending": {
+    "authorName": "Ziqi",
+    "narrationWaterMemory": "The waters of Harie distill countless landscapes into a single thread of memory.",
+    "narrationFallenPetals": "Petals return to the earth, nourish the roots, and come the following year, new flowers bloom once more.",
+    "narrationRiversReturn": "A hundred rivers flow into the sea, and so passes all that has gone.\nYet still they gather into clouds, become rain, and return to the mountains and streams.",
+    "narrationTwelveDegreeWater": "That twelve-degree water hides a warmth within its cold,",
+    "narrationTravelers": "Urging onward those who depart, and slaking the thirst of those who return.",
+    "narrationWaterKeepsAsking": "Even should the village empty, the water will keep asking—",
+    "narrationWhereToReturn": "\"Where do you live, and where do you wish to return?\"",
+    "narrationEternalHome": "As long as the sound of water endures, this land will forever remain someone's home.",
+    "investigationComplete": "------ Harie: Investigation Complete ------",
+    "thanksForPlaying": "Thanks for playing.",
+    "authorCommentPrompt": "E: Author's Commentary",
+    "authorCommentFallback": "The author's commentary is still being prepared."
+  },
+  "specialThanks": {
+    "credits": "Special Thanks\n\nAuthor: Ziqi\nMultilingual Translation Tool: ChatGPT WorkBuddy\nCo-author: Ririko Nishioka, ChatGPT\nIllustration Support: Xiao Taiyang (Friend A)\nBGM: Lil $pider (Childhood Friend)\nProgramming Tools: Visual Studio Code \nArt Tools: Photoshop, Tiled\nLocal Cooperation: Daisuke Ishizu"
+  },
+  "characters": {
+    "ishizu": "Ishizu",
+    "oldMan": "Old Man",
+    "koi": "Koi",
+    "childA": "Child A",
+    "childB": "Child B",
+    "machi": "Machi"
+  },
+  "menu": {
+    "title": "Harie Stroll",
+    "newGame": "New Game",
+    "settingsButton": "Settings",
+    "continue": "Continue",
+    "settingsTitle": "Settings",
+    "bgmLabel": "Music",
+    "seLabel": "Sound Effects",
+    "languageLabel": "Language",
+    "back": "Back"
+  },
+  "tutorial": {
+    "notebook": "F: Memo",
+    "confirmNotebook": "← Press F to Confirm",
+    "moveNotebookPage": "← →  Turn Page",
+    "moveUp": "↑",
+    "moveLeft": "←",
+    "moveDown": "↓",
+    "moveRight": "→"
+  },
+  "npcMenu": {
+    "talk": "Talk",
+    "askInvestigation": "Ask About the Investigation",
+    "later": "Maybe Later",
+    "investigationFallback": "About the Investigation",
+    "back": "Back",
+    "pageIndicator": "◀ {current} / {total} ▶",
+    "selectedItem": "▶ {label}"
+  },
+  "investigation": {
+    "noData": "No Data",
+    "alreadyInvestigated": "Already Investigated",
+    "missingPhoto": "No Photo",
+    "missingVideo": "No Video",
+    "missingAudio": "No Audio"
+  },
+  "notebook": {
+    "pageIndicator": "{current} / {total}",
+    "navigation": "←/→ Turn Page   F / ESC Close",
+    "firstPageStatus": "   (First page)",
+    "lastPageStatus": "   (Last page)",
+    "peopleDataMissing": "(Last page)",
+    "peopleTitle": "People",
+    "missingPersonName": "???",
+    "bookmarksTitle": "Bookmarks",
+    "noRecords": "No records yet",
+    "fragmentListItem": "✓ {title}",
+    "quote": "\"{quote}\"",
+    "speaker": "— {speaker}",
+    "location": "Location: {location}",
+    "date": "Date: {date}"
+  },
+  "monologue": {
+    "freeExplorationHungry": "After walking around so much, I'm getting a little hungry.",
+    "freeExplorationAskIshizu": "Let's ask Ishizu about somewhere to eat around here."
+  },
+  "storyHints": {
+    "npcWantsToTalk": "{name} seems to want \nto say something."
+  },
+  "dialog": {
+    "fallback": {
+      "noticeSomething": "Let me know if you notice anything else.",
+      "ellipsis": "…",
+      "hello": "Hello"
+    }
+  },
+  "system": {
+    "interactPrompt": "E",
+    "memoUpdated": "Memo Updated",
+    "percentage": "{value}%"
+  }
+}

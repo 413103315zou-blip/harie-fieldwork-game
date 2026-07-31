@@ -1,0 +1,22 @@
+{
+  "title": "針江さんぽ",
+  "overlayAlpha": 0.5,
+  "defaultBgmVolume": 50,
+  "defaultSeVolume": 50,
+  "fadeDuration": 500,
+  "startMenu": {
+    "mainButton": "新ゲーム",
+    "settingsButton": "設定",
+    "browserZoomHint": "画面が小さい場合は、ブラウザの表示倍率を調整してください"
+  },
+  "pauseMenu": {
+    "mainButton": "続ける",
+    "settingsButton": "設定"
+  },
+  "settingsMenu": {
+    "title": "設定",
+    "bgmLabel": "音楽",
+    "seLabel": "効果音",
+    "backButton": "戻る"
+  }
+}

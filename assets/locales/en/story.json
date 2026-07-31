@@ -1,0 +1,61 @@
+{
+  "initialStoryStage": 0,
+  "endingFragments": [
+    "rice_seedling",
+    "history",
+    "community_center"
+  ],
+  "endingAvailableFragments": [
+    "rice_seedling",
+    "history",
+    "community_center",
+    "flower1",
+    "flower2"
+  ],
+  "endingRequiredFragments": [
+    "rice_seedling",
+    "history",
+    "community_center"
+  ],
+  "endingCG": {
+    "image": "ending_cg.png",
+    "duration": 5000
+  },
+  "warpRequirements": {
+    "harie_community_center": {
+      "storyStageMin": 2
+    }
+  },
+  "prologue": {
+    "autoPlay": true,
+    "dialogs": [
+      { "speaker": "narrator", "text": "Harie — a water village on the shores of Lake Biwa." },
+      { "speaker": "narrator", "text": "The spring water stays cold year-round. The same in summer as in winter." },
+      { "speaker": "narrator", "text": "This water has sustained the people's way of life." },
+      { "speaker": "narrator", "text": "Today, a traveler comes to visit this village." },
+      { "speaker": "machi", "text": "Is this Harie in Shiga Prefecture?" },
+      { "speaker": "machi", "text": "Why is it so quiet, even at the bus stop...\nThe sound of water is the only thing that seems so loud." },
+      { "speaker": "machi", "text": "Is that person over there in charge of this inn? Let me go introduce myself first." }
+    ]
+  },
+  "investigationTriggers": [
+    {
+      "fragmentId": "hostel",
+      "setStoryStage": 2
+    },
+    {
+      "fragmentId": "community_board",
+      "requirements": {
+        "investigated": ["community_board", "old_house"]
+      },
+      "setStoryStage": 4
+    },
+    {
+      "fragmentId": "old_house",
+      "requirements": {
+        "investigated": ["community_board", "old_house"]
+      },
+      "setStoryStage": 4
+    }
+  ]
+}

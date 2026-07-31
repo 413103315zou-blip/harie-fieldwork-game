@@ -1,0 +1,223 @@
+[
+  {
+    "id": "stage5_final_dialog",
+    "priority": 600,
+    "requirements": {
+      "storyStageMin": 5,
+      "storyStageMax": 5,
+      "endingFragmentsComplete": true
+    },
+    "text": "Ishizu seems to want to say something."
+  },
+  {
+    "id": "stage5_free_explore",
+    "priority": 500,
+    "requirements": {
+      "storyStageMin": 5,
+      "storyStageMax": 5,
+      "endingFragmentsComplete": false
+    },
+    "text": "Free exploration.\nTake a look around."
+  },
+  {
+    "id": "stage2_hostel_hint",
+    "priority": 250,
+    "requirements": {
+      "storyStageMin": 2,
+      "storyStageMax": 2,
+      "currentMap": "harie_outside",
+      "playedDialogGroups": [
+        { "npcId": "npc1", "groupId": "after_free_exploration" }
+      ],
+      "notInvestigated": ["hostel"]
+    },
+    "text": "Let's take a look around the inn."
+  },
+  {
+    "id": "stage2_enter_hostel",
+    "priority": 250,
+    "requirements": {
+      "storyStageMin": 2,
+      "storyStageMax": 2,
+      "currentMap": "harie_outside",
+      "playedDialogGroups": [
+        { "npcId": "npc1", "groupId": "after_free_exploration" }
+      ],
+      "investigated": ["hostel"]
+    },
+    "text": "Let's go inside the inn."
+  },
+  {
+    "id": "stage2_talk_to_ishizu",
+    "priority": 270,
+    "requirements": {
+      "storyStageMin": 2,
+      "storyStageMax": 2,
+      "currentMap": "harie_outside",
+      "playedDialogGroups": [
+        { "npcId": "npc3", "groupId": "after_hostel_loop" }
+      ]
+    },
+    "text": "Take a walk around the village and speak with the local residents."
+  },
+  {
+    "id": "room_foyer_hint",
+    "priority": 260,
+    "requirements": {
+      "currentMap": "harie_room",
+      "notInvestigated": ["foyer"]
+    },
+    "text": "Let's look around inside the inn."
+  },
+  {
+    "id": "room_table_hint",
+    "priority": 250,
+    "requirements": {
+      "currentMap": "harie_room",
+      "investigated": ["foyer"],
+      "notInvestigated": ["table"]
+    },
+    "text": "Something seems to be on the table."
+  },
+  {
+    "id": "room_poolroom_hint",
+    "priority": 240,
+    "requirements": {
+      "currentMapIn": ["harie_room"],
+      "investigated": ["foyer", "table"],
+      "notInvestigated": ["poolroom"]
+    },
+    "text": "I can hear the sound of water from deeper inside."
+  },
+  {
+    "id": "stage1_field",
+    "priority": 100,
+    "requirements": {
+      "storyStageMin": 1,
+      "storyStageMax": 1,
+      "notInvestigated": ["field"]
+    },
+    "text": "Let's take a closer look at the rice field."
+  },
+  {
+    "id": "stage1_weeding",
+    "priority": 90,
+    "requirements": {
+      "storyStageMin": 1,
+      "storyStageMax": 1,
+      "notInvestigated": ["weeding"]
+    },
+    "text": "It looks like someone is working in the rice field."
+  },
+  {
+    "id": "stage1_potato",
+    "priority": 80,
+    "requirements": {
+      "storyStageMin": 1,
+      "storyStageMax": 1,
+      "notInvestigated": ["potato_sorting"]
+    },
+    "text": "Someone is sorting the harvested crops."
+  },
+  {
+    "id": "stage1_water_surface",
+    "priority": 70,
+    "requirements": {
+      "storyStageMin": 1,
+      "storyStageMax": 1,
+      "notInvestigated": ["water_surface"]
+    },
+    "text": "There seems to be something about the river's surface."
+  },
+  {
+    "id": "stage2_talk_to_residents",
+    "priority": 270,
+    "requirements": {
+      "storyStageMin": 2,
+      "storyStageMax": 2,
+      "currentMapIn": ["harie_outside", "harie_community_center"],
+      "notPlayedDialogGroups": [
+        { "npcId": "npc2", "groupId": "first_meeting" }
+      ]
+    },
+    "text": "Walk through the village and speak with the local residents."
+  },
+  {
+    "id": "stage2_return_to_ishizu",
+    "priority": 280,
+    "requirements": {
+      "storyStageMin": 2,
+      "storyStageMax": 2,
+      "currentMapIn": ["harie_outside", "harie_community_center"],
+      "playedDialogGroups": [
+        { "npcId": "npc2", "groupId": "first_meeting" }
+      ],
+      "notPlayedDialogGroups": [
+        { "npcId": "npc1", "groupId": "after_free_exploration" }
+      ]
+    },
+    "text": "I'm getting a little hungry.\nLet's go ask Ishizu."
+  },
+  {
+    "id": "stage4_water_grass",
+    "priority": 250,
+    "requirements": {
+      "storyStageMin": 4,
+      "storyStageMax": 4,
+      "notInvestigated": ["water_grass"]
+    },
+    "text": "Let's head back to the Okawa River."
+  },
+  {
+    "id": "stage3_community_board",
+    "priority": 250,
+    "requirements": {
+      "storyStageMin": 3,
+      "storyStageMax": 3,
+      "currentMap": "harie_community_center",
+      "notInvestigated": ["community_board"]
+    },
+    "text": "Let's take a look at the bulletin board."
+  },
+  {
+    "id": "stage3_old_house",
+    "priority": 240,
+    "requirements": {
+      "storyStageMin": 3,
+      "storyStageMax": 3,
+      "investigated": ["community_board"],
+      "notInvestigated": ["old_house"]
+    },
+    "text": "Let's take a look at the empty house."
+  },
+  {
+    "id": "stage4_okawa",
+    "priority": 240,
+    "requirements": {
+      "storyStageMin": 4,
+      "storyStageMax": 4,
+      "investigated": ["okawa"],
+      "notInvestigated": ["okawa"]
+    },
+    "text": "Let's talk to the children by the Okawa River."
+  },
+  {
+    "id": "stage4_ending",
+    "priority": 230,
+    "requirements": {
+      "storyStageMin": 4,
+      "storyStageMax": 4,
+      "investigated": ["water_grass"]
+    },
+    "text": "Let's go talk to Ishizu."
+  },
+  {
+    "id": "stage3_free_explore",
+    "priority": 50,
+    "requirements": {
+      "storyStageMin": 3,
+      "storyStageMax": 3
+    },
+    "text": "It's still a while before dark.\nLet's take a stroll toward the community center."
+  }
+]

@@ -1,0 +1,276 @@
+{
+  "dialogGroups": [
+    {
+      "id": "first_meeting",
+      "role": "first_meeting",
+      "askable": false,
+      "requirements": {
+        "storyStageMin": 0,
+        "storyStageMax": 0
+      },
+      "once": true,
+      "played": false,
+      "priority": 100,
+      "dialogs": [
+        { "speaker": "ishizu", "text": "你好，我是石津。" },
+        { "speaker": "ishizu", "text": "欢迎来到针江。" },
+        { "speaker": "ishizu", "text": "在这里，水就在生活的身边。" },
+        { "speaker": "machi", "text": "刚才开始，就一直能听到水声。" },
+        { "speaker": "ishizu", "text": "走一走的话，会更清楚的。" },
+        { "speaker": "ishizu", "text": "请先去看看水田那边。" },
+        { "speaker": "machi", "text": "好的。我稍微转转。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": 1
+    },
+    {
+      "id": "after_field",
+      "role": "question",
+      "askable": true,
+      "questionTitle": "关于水田",
+      "requirements": {
+        "storyStageMin": 1,
+        "investigated": ["field"]
+      },
+      "once": true,
+      "played": false,
+      "priority": 90,
+      "dialogs": [
+        { "speaker": "ishizu", "text": "看过水田了吗？" },
+        { "speaker": "machi", "text": "嗯。水比想象中更凉。" },
+        { "speaker": "ishizu", "text": "秧苗适应那个温度，需要一点时间。" },
+        { "speaker": "machi", "text": "秧苗要适应水温啊。" },
+        { "speaker": "ishizu", "text": "是的。那段时间也是种稻的一部分。" },
+        { "speaker": "ishizu", "text": "看看其他作业的话，会更明白的。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [
+        {
+          "fragmentId": "field",
+          "memo": "秧苗适应水温需要时间",
+          "quote": "那段时间也是种稻的一部分",
+          "speaker": "ishizu"
+        }
+      ],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "after_weeding_brief",
+      "role": "question",
+      "askable": true,
+      "questionTitle": "关于除草",
+      "requirements": {
+        "storyStageMin": 1,
+        "investigated": ["weeding"]
+      },
+      "once": true,
+      "played": false,
+      "priority": 80,
+      "dialogs": [
+        { "speaker": "ishizu", "text": "也看过除草了吗？" },
+        { "speaker": "machi", "text": "嗯。大家都在默默地干活。" },
+        { "speaker": "ishizu", "text": "虽然是踏实的工作，但这也是种稻不可缺少的。" },
+        { "speaker": "machi", "text": "不用机器，而是用手吗？" },
+        { "speaker": "ishizu", "text": "水边的草，用手拔才能连根拔掉。" },
+        { "speaker": "ishizu", "text": "水和草的关系，慢慢看就会明白的。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [
+        {
+          "fragmentId": "weeding",
+          "memo": "水边的草必须用手拔才能连根拔除",
+          "quote": "水和草的关系，慢慢看就会明白的",
+          "speaker": "ishizu"
+        }
+      ],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "after_potato_sorting",
+      "role": "question",
+      "askable": true,
+      "questionTitle": "关于土豆分选",
+      "requirements": {
+        "storyStageMin": 1,
+        "investigated": ["potato_sorting"]
+      },
+      "once": true,
+      "played": false,
+      "priority": 70,
+      "dialogs": [
+        { "speaker": "ishizu", "text": "也看过土豆分选了吗？" },
+        { "speaker": "machi", "text": "嗯。他们在把大的和小的分开。" },
+        { "speaker": "ishizu", "text": "那是针江的日常作业。" },
+        { "speaker": "machi", "text": "大家动作都很利索。" },
+        { "speaker": "ishizu", "text": "做久了自然就会了。" },
+        { "speaker": "ishizu", "text": "把收成分选出来，也是生活的一部分。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [
+        {
+          "fragmentId": "potato_sorting",
+          "memo": "分选收成也是生活的一部分",
+          "quote": "做久了自然就会了",
+          "speaker": "ishizu"
+        }
+      ],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "stage1_default",
+      "role": "default",
+      "askable": false,
+      "requirements": {
+        "storyStageMin": 1
+      },
+      "once": false,
+      "played": false,
+      "priority": 0,
+      "dialogs": [
+        { "speaker": "ishizu", "text": "今天请慢慢逛逛。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "after_free_exploration",
+      "role": "story",
+      "askable": false,
+      "questionTitle": "关于针江的美食",
+      "requirements": {
+        "storyStageMin": 2,
+        "storyStageMax": 2,
+        "metNpcs": ["npc2", "npc4", "npc5"]
+      },
+      "once": true,
+      "played": false,
+      "priority": 300,
+      "dialogs": [
+        { "speaker": "ishizu", "text": "走了不少路啊。" },
+        { "speaker": "machi", "text": "嗯。跟好多人聊了聊，肚子就饿了。" },
+        { "speaker": "ishizu", "text": "那的话，去旅馆那边看看吧。" },
+        { "speaker": "ishizu", "text": "有用针江的水煮的饭，还有热乎乎的菜。" },
+        { "speaker": "machi", "text": "用针江的水做的菜……有点好奇。" },
+        { "speaker": "ishizu", "text": "请先去旅馆外面看看。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": null,
+      "setStoryHint": {
+        "id": "hostel_hint",
+        "text": "去旅馆附近看看吧",
+        "clearOnInvestigated": "hostel"
+      }
+    },
+    {
+      "id": "after_hostel_loop",
+      "role": "question",
+      "askable": true,
+      "questionTitle": "关于在旅馆看到的生活",
+      "requirements": {
+        "storyStageMin": 2,
+        "storyStageMax": 2,
+        "investigated": ["foyer", "table", "poolroom", "pool", "rice", "soup", "kitchen"],
+        "playedDialogGroups": [
+          { "npcId": "npc3", "groupId": "after_hostel_loop" }
+        ]
+      },
+      "once": true,
+      "played": false,
+      "priority": 400,
+      "dialogs": [
+        { "speaker": "machi", "text": "在旅馆里，我看到水被用在生活的方方面面。" },
+        { "speaker": "ishizu", "text": "是啊。做饭也好洗澡也好，在针江水和生活是分不开的。" },
+        { "speaker": "ishizu", "text": "接下来去社区中心看看吧。应该能看到村里人之间的联系。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": 3
+    },
+    {
+      "id": "stage5_entry",
+      "role": "question",
+      "askable": true,
+      "questionTitle": "关于针江的未来",
+      "requirements": {
+        "storyStageMin": 4,
+        "storyStageMax": 4,
+        "investigated": ["water_grass"]
+      },
+      "once": true,
+      "played": false,
+      "priority": 500,
+      "dialogs": [
+        { "speaker": "machi", "text": "关于针江的未来，我想再多了解一些。" },
+        { "speaker": "ishizu", "text": "还有没看过的地方。自由地在村里走走吧。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": 5
+    },
+    {
+      "id": "final_dialog",
+      "role": "question",
+      "askable": true,
+      "questionTitle": "最后聊聊",
+      "requirements": {
+        "storyStageMin": 5,
+        "storyStageMax": 5,
+        "endingFragmentsComplete": true
+      },
+      "once": true,
+      "played": false,
+      "priority": 600,
+      "dialogs": [
+        { "speaker": "ishizu", "text": "村子大致逛了一圈了吗？" },
+        { "speaker": "machi", "text": "嗯。水的事、祭典的事、空房子的事……\n我还知道大川一直通到琵琶湖了。" },
+        { "speaker": "ishizu", "text": "针江啊，是水把一切都连在一起的。" },
+        { "speaker": "ishizu", "text": "不搞出能赚钱的路子，年轻人是不会回来的。" },
+        { "speaker": "machi", "text": "但是，水一直在流着呢。" },
+        { "speaker": "ishizu", "text": "是啊。只要水还活着，针江就不会消失。\n答案就在水里。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": 6
+    },
+    {
+      "id": "future_placeholder",
+      "role": "default",
+      "askable": false,
+      "requirements": {
+        "storyStageMin": 99
+      },
+      "once": true,
+      "played": false,
+      "priority": 0,
+      "dialogs": [
+        { "speaker": "ishizu", "text": "…" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    }
+  ]
+}

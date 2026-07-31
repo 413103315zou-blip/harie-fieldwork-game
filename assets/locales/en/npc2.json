@@ -1,0 +1,165 @@
+{
+  "dialogGroups": [
+    {
+      "id": "first_meeting",
+      "role": "first_meeting",
+      "askable": false,
+      "requirements": {
+        "storyStageMin": 0
+      },
+      "once": true,
+      "played": false,
+      "priority": 100,
+      "dialogs": [
+        { "speaker": "machi", "text": "Hello. What are you looking at?" },
+        { "speaker": "oldman", "text": "Nothing much, really." },
+        { "speaker": "oldman", "text": "Just sitting here, listening to the sound of the water." },
+        { "speaker": "machi", "text": "Do you come here every day?" },
+        { "speaker": "oldman", "text": "Ever since I was young, hearing this sound has always calmed me." }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "after_okawa_surface",
+      "role": "question",
+      "askable": true,
+      "questionTitle": "About the Okawa River's Surface",
+      "requirements": {
+        "storyStageMin": 1,
+        "investigated": ["water_surface"]
+      },
+      "once": true,
+      "played": false,
+      "priority": 90,
+      "dialogs": [
+        { "speaker": "oldman", "text": "Did you see the surface of the Okawa River?" },
+        { "speaker": "machi", "text": "Yes. The light reflecting off it was beautiful." },
+        { "speaker": "oldman", "text": "That water surface looks different every day." },
+        { "speaker": "machi", "text": "Every day? You mean it changes with the weather?" },
+        { "speaker": "oldman", "text": "Aye. It changes with the seasons, and with the time of day." },
+        { "speaker": "oldman", "text": "Though the water temperature stays right around 12°C, year in and year out." },
+        { "speaker": "oldman", "text": "Watch it long enough, and you'll start to understand how the water moves." }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [
+        {
+          "fragmentId": "water_surface",
+          "memo": "The water surface looks different every day. It changes with weather and seasons.",
+          "quote": "Watch it long enough, and you'll start to understand how the water moves.",
+          "speaker": "oldman"
+        }
+      ],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "stage1_default",
+      "role": "default",
+      "askable": false,
+      "requirements": {
+        "storyStageMin": 0
+      },
+      "once": false,
+      "played": false,
+      "priority": 0,
+      "dialogs": [
+        { "speaker": "oldman", "text": "Hearing the sound of the water just settles you right down, doesn't it." }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "after_community_board",
+      "role": "question",
+      "askable": true,
+      "questionTitle": "About the Festival",
+      "requirements": {
+        "storyStageMin": 3,
+        "investigated": ["community_board"]
+      },
+      "once": true,
+      "played": false,
+      "priority": 85,
+      "dialogs": [
+        { "speaker": "oldman", "text": "Did you see the poster on the bulletin board?" },
+        { "speaker": "machi", "text": "Yes. It's a festival called the Takashima Dance (高島踊り), right?" },
+        { "speaker": "oldman", "text": "In the old days, the whole village would gather for this dance." },
+        { "speaker": "oldman", "text": "When the dancing was over, everyone would share drinks by the riverbank." },
+        { "speaker": "machi", "text": "They don't do it anymore?" },
+        { "speaker": "oldman", "text": "It's still going on. It's an annual event." }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [
+        {
+          "fragmentId": "community_board",
+          "memo": "The Takashima Dance was once a festival that brought the whole village together.",
+          "quote": "In the old days, the whole village would gather for this dance.",
+          "speaker": "oldman"
+        }
+      ],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "after_water_grass_stage4",
+      "role": "question",
+      "askable": true,
+      "questionTitle": "Water Circulates",
+      "requirements": {
+        "storyStageMin": 4,
+        "investigated": ["water_grass"]
+      },
+      "once": true,
+      "played": false,
+      "priority": 75,
+      "dialogs": [
+        { "speaker": "oldman", "text": "Did you see the water grass flowing?" },
+        { "speaker": "machi", "text": "Yes. The water was flowing steadily in one direction." },
+        { "speaker": "oldman", "text": "That water will eventually flow into Lake Biwa, and then return to the sky." },
+        { "speaker": "oldman", "text": "It falls as rain on the mountains, and comes back to this river." },
+        { "speaker": "machi", "text": "So the water is always circulating." },
+        { "speaker": "oldman", "text": "Water circulates. And people, too, will someday find their way back." }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [
+        {
+          "fragmentId": "water_grass",
+          "memo": "Water flows into Lake Biwa, becomes rain, and returns to the mountains.",
+          "quote": "Water circulates. And people, too, will someday find their way back.",
+          "speaker": "oldman"
+        }
+      ],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "future_placeholder",
+      "role": "default",
+      "askable": false,
+      "requirements": {
+        "storyStageMin": 99
+      },
+      "once": true,
+      "played": false,
+      "priority": 0,
+      "dialogs": [
+        { "speaker": "oldman", "text": "…" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    }
+  ]
+}

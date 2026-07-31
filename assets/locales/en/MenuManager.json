@@ -1,0 +1,22 @@
+{
+  "title": "Harie Stroll",
+  "overlayAlpha": 0.5,
+  "defaultBgmVolume": 50,
+  "defaultSeVolume": 50,
+  "fadeDuration": 500,
+  "startMenu": {
+    "mainButton": "New Game",
+    "settingsButton": "Settings",
+    "browserZoomHint": "If the screen appears small, adjust your browser zoom"
+  },
+  "pauseMenu": {
+    "mainButton": "Continue",
+    "settingsButton": "Settings"
+  },
+  "settingsMenu": {
+    "title": "Settings",
+    "bgmLabel": "Music",
+    "seLabel": "Sound Effects",
+    "backButton": "Back"
+  }
+}

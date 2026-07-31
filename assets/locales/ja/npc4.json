@@ -1,0 +1,167 @@
+{
+  "dialogGroups": [
+    {
+      "id": "first_meeting",
+      "role": "first_meeting",
+      "askable": false,
+      "requirements": {
+        "storyStageMin": 0
+      },
+      "once": true,
+      "played": false,
+      "priority": 100,
+      "dialogs": [
+        { "speaker": "child1", "text": "あ、都会から来た人！" },
+        { "speaker": "child1", "text": "ここで川下りするのが一番楽しいよ！" },
+        { "speaker": "child1", "text": "水の音がずーっと聞こえて、泳いでるみたい。" },
+        { "speaker": "machi", "text": "水の音、確かにすごく聞こえるね。" },
+        { "speaker": "child1", "text": "でしょう？大人になったら、この村を出たい気もするけど…" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "after_weeding",
+      "role": "question",
+      "askable": true,
+      "questionTitle": "田んぼの作業について",
+      "requirements": {
+        "storyStageMin": 1,
+        "investigated": ["weeding"]
+      },
+      "once": true,
+      "played": false,
+      "priority": 90,
+      "dialogs": [
+        { "speaker": "child1", "text": "田んぼの作業、見た？" },
+        { "speaker": "machi", "text": "うん。草を取るのが大変そうだったよ。" },
+        { "speaker": "child2", "text": "あれ、ずっとやってるんだよ。夏も冬も。" },
+        { "speaker": "child1", "text": "僕も手伝いたいけど、まだ小さいからなあ。" },
+        { "speaker": "child2", "text": "おばあちゃんは、いつも一人でやってるんだ。" },
+        { "speaker": "machi", "text": "みんなで手伝えばいいのにね。" },
+        { "speaker": "child1", "text": "でも、おばあちゃんは自分のやり方があるんだって。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [
+        {
+          "fragmentId": "weeding",
+          "memo": "草取りは夏も冬も続く毎日の作業",
+          "quote": "あれ、ずっとやってるんだよ。夏も冬も。",
+          "speaker": "child2"
+        }
+      ],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "stage1_default",
+      "role": "default",
+      "askable": false,
+      "requirements": {
+        "storyStageMin": 0
+      },
+      "once": false,
+      "played": false,
+      "priority": 0,
+      "dialogs": [
+        { "speaker": "child1", "text": "また何か見つけた？" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "after_old_house",
+      "role": "question",
+      "askable": true,
+      "questionTitle": "空き家について",
+      "requirements": {
+        "storyStageMin": 3,
+        "investigated": ["old_house"]
+      },
+      "once": true,
+      "played": false,
+      "priority": 80,
+      "dialogs": [
+        { "speaker": "child1", "text": "あの空き家、見た？" },
+        { "speaker": "machi", "text": "うん。誰も住んでいないみたいだったね。" },
+        { "speaker": "child1", "text": "あそこ、僕らの秘密基地なんだ。" },
+        { "speaker": "child1", "text": "中に大きな櫃があって、そこに隠れるのが楽しいんだよ。" },
+        { "speaker": "machi", "text": "そうなんだ。でも、少し怖くない？" },
+        { "speaker": "child1", "text": "全然。でも……お兄ちゃんは、もう戻ってこないのかな。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [
+        {
+          "fragmentId": "old_house",
+          "memo": "空き家は子供たちの秘密基地。でも誰かが帰ってこない",
+          "quote": "お兄ちゃんは、もう戻ってこないのかな",
+          "speaker": "child1"
+        }
+      ],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "stage4_boat_memory",
+      "role": "story",
+      "askable": false,
+      "requirements": {
+        "storyStageMin": 4,
+        "storyStageMax": 4,
+        "investigated": ["okawa"]
+      },
+      "once": true,
+      "played": false,
+      "priority": 500,
+      "dialogs": [
+        { "speaker": "child1", "text": "水が冷たくて気持ちええねん！" },
+        { "speaker": "machi", "text": "ここでは、よく川で遊ぶの？" },
+        { "speaker": "child1", "text": "昔はもっと遊んでたって、おじいちゃんが言ってた。" },
+        { "speaker": "child1", "text": "ここで船に乗って、琵琶湖まで行ったんや。" },
+        { "speaker": "machi", "text": "この川から、琵琶湖まで？" },
+        { "speaker": "child2", "text": "うん。水はずっと向こうまで続いてるんやって。" },
+        { "speaker": "child1", "text": "今はそんな遊び方、あんまりせえへんけどな。" },
+        { "speaker": "machi", "text": "村の中を流れる水が、琵琶湖までつながっているんだ……。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [
+        {
+          "fragmentId": "okawa",
+          "memo": "大川の水は村から琵琶湖へ続いている",
+          "quote": "ここで船に乗って、琵琶湖まで行ったんや。",
+          "speaker": "child1"
+        }
+      ],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "future_placeholder",
+      "role": "default",
+      "askable": false,
+      "requirements": {
+        "storyStageMin": 99
+      },
+      "once": true,
+      "played": false,
+      "priority": 0,
+      "dialogs": [
+        { "speaker": "child1", "text": "…" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "dialogGroups": [
+    {
+      "id": "first_meeting",
+      "role": "first_meeting",
+      "askable": false,
+      "requirements": {
+        "storyStageMin": 0
+      },
+      "once": true,
+      "played": false,
+      "priority": 100,
+      "dialogs": [
+        { "speaker": "child2", "text": "那里是不可以进去的秘密基地。" },
+        { "speaker": "machi", "text": "秘密基地？" },
+        { "speaker": "child2", "text": "从有水声的洞口往里看，有好多鲤鱼。" },
+        { "speaker": "machi", "text": "好多鲤鱼？" },
+        { "speaker": "child2", "text": "对大人保密哦。说好了。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "after_potato_sorting",
+      "role": "question",
+      "askable": true,
+      "questionTitle": "关于土豆",
+      "requirements": {
+        "storyStageMin": 1,
+        "investigated": ["potato_sorting"]
+      },
+      "once": true,
+      "played": false,
+      "priority": 90,
+      "dialogs": [
+        { "speaker": "child2", "text": "土豆分选，看了吗？" },
+        { "speaker": "machi", "text": "嗯。在把大的和小的分开。" },
+        { "speaker": "child1", "text": "形状和大小都不一样。" },
+        { "speaker": "child2", "text": "看起来简单，但其实要仔细看才行。" },
+        { "speaker": "child1", "text": "我也帮过忙。眼睛会很累。" },
+        { "speaker": "machi", "text": "这样啊。挺辛苦的活呢。" },
+        { "speaker": "child2", "text": "不过，分完之后很舒服。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [
+        {
+          "fragmentId": "potato_sorting",
+          "memo": "形状大小各不相同。必须仔细看",
+          "quote": "要仔细看才行",
+          "speaker": "child2"
+        }
+      ],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "stage1_default",
+      "role": "default",
+      "askable": false,
+      "requirements": {
+        "storyStageMin": 0
+      },
+      "once": false,
+      "played": false,
+      "priority": 0,
+      "dialogs": [
+        { "speaker": "child2", "text": "又来玩了？" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "after_old_house",
+      "role": "question",
+      "askable": true,
+      "questionTitle": "回来的人",
+      "requirements": {
+        "storyStageMin": 3,
+        "investigated": ["old_house"]
+      },
+      "once": true,
+      "played": false,
+      "priority": 80,
+      "dialogs": [
+        { "speaker": "child2", "text": "哥哥今年也没回来。" },
+        { "speaker": "machi", "text": "哥哥？" },
+        { "speaker": "child2", "text": "以前一起在那个房子玩的。" },
+        { "speaker": "child2", "text": "但是，水还是照样流着。" },
+        { "speaker": "child1", "text": "爷爷说过。只要水还在，总有一天会回来的。" },
+        { "speaker": "machi", "text": "这样啊……" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [
+        {
+          "fragmentId": "old_house",
+          "memo": "有人再也没回来。但水依然在流",
+          "quote": "爷爷说过，只要水还在，总有一天会回来的",
+          "speaker": "child1"
+        }
+      ],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "future_placeholder",
+      "role": "default",
+      "askable": false,
+      "requirements": {
+        "storyStageMin": 99
+      },
+      "once": true,
+      "played": false,
+      "priority": 0,
+      "dialogs": [
+        { "speaker": "child2", "text": "…" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    }
+  ]
+}

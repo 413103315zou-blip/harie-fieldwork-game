@@ -1,0 +1,53 @@
+{
+  "progress": {
+    "collectedLabel": "Collected"
+  },
+  "pages": [
+    {
+      "id": "people",
+      "title": "People",
+      "items": [
+        {
+          "id": "ishizu",
+          "name": "Ishizu",
+          "portrait": "ishizu",
+          "text": "Manager of Nonki Farm (のんきファーム) in Harie. (Present · Daily Life)",
+          "unlocked": false
+        },
+        {
+          "id": "oldman",
+          "name": "Old Man",
+          "portrait": "oldman",
+          "text": "Someone who knows the old days of Harie. (Past · Tradition)",
+          "unlocked": false
+        },
+        {
+          "id": "child1",
+          "name": "Child A",
+          "portrait": "child1",
+          "text": "Looks to the future. (Future · Hope)",
+          "unlocked": false
+        },
+        {
+          "id": "child2",
+          "name": "Child B",
+          "portrait": "child2",
+          "text": "Innocent and simple, pure and carefree. (Future · Hope)",
+          "unlocked": false
+        },
+        {
+          "id": "koi",
+          "name": "Koi",
+          "portrait": "koi",
+          "text": "A creature living in nature. (Nature · Life)",
+          "unlocked": false
+        }
+      ]
+    },
+    {
+      "id": "fragments",
+      "title": "Bookmarks",
+      "type": "list"
+    }
+  ]
+}

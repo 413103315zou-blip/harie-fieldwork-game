@@ -1,0 +1,276 @@
+{
+  "dialogGroups": [
+    {
+      "id": "first_meeting",
+      "role": "first_meeting",
+      "askable": false,
+      "requirements": {
+        "storyStageMin": 0,
+        "storyStageMax": 0
+      },
+      "once": true,
+      "played": false,
+      "priority": 100,
+      "dialogs": [
+        { "speaker": "ishizu", "text": "こんにちは、石津です。" },
+        { "speaker": "ishizu", "text": "ようこそ、針江へ。" },
+        { "speaker": "ishizu", "text": "ここでは、水が暮らしのすぐそばにあります。" },
+        { "speaker": "machi", "text": "さっきから、水の音がずっと聞こえます。" },
+        { "speaker": "ishizu", "text": "歩いてみたら、もっとよく分かると思います。" },
+        { "speaker": "ishizu", "text": "まずは田んぼの方を見てきてください。" },
+        { "speaker": "machi", "text": "分かりました。少し見て回ります。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": 1
+    },
+    {
+      "id": "after_field",
+      "role": "question",
+      "askable": true,
+      "questionTitle": "田んぼについて",
+      "requirements": {
+        "storyStageMin": 1,
+        "investigated": ["field"]
+      },
+      "once": true,
+      "played": false,
+      "priority": 90,
+      "dialogs": [
+        { "speaker": "ishizu", "text": "田んぼを見てきましたか。" },
+        { "speaker": "machi", "text": "はい。水が思っていたより冷たかったです。" },
+        { "speaker": "ishizu", "text": "苗がその冷たさに慣れるには、少し時間がかかります。" },
+        { "speaker": "machi", "text": "苗が水に慣れるんですね。" },
+        { "speaker": "ishizu", "text": "ええ。その時間も米作りの一部です。" },
+        { "speaker": "ishizu", "text": "ほかの作業も見てみると、もっと分かると思います。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [
+        {
+          "fragmentId": "field",
+          "memo": "苗が冷たさに慣れるには時間がかかる",
+          "quote": "その時間も米作りの一部です",
+          "speaker": "ishizu"
+        }
+      ],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "after_weeding_brief",
+      "role": "question",
+      "askable": true,
+      "questionTitle": "草取りについて",
+      "requirements": {
+        "storyStageMin": 1,
+        "investigated": ["weeding"]
+      },
+      "once": true,
+      "played": false,
+      "priority": 80,
+      "dialogs": [
+        { "speaker": "ishizu", "text": "草取りも見てきましたか。" },
+        { "speaker": "machi", "text": "はい。皆さん、黙々と作業していました。" },
+        { "speaker": "ishizu", "text": "地道な作業ですが、これも米作りには欠かせません。" },
+        { "speaker": "machi", "text": "機械ではなく、手でやるんですか。" },
+        { "speaker": "ishizu", "text": "水のそばの草は、手で抜かないと根こそぎ取れないんです。" },
+        { "speaker": "ishizu", "text": "水と草の関係も、見ていくうちに分かってきますよ。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [
+        {
+          "fragmentId": "weeding",
+          "memo": "水のそばの草は手で抜かないと根こそぎ取れない",
+          "quote": "水と草の関係も、見ていくうちに分かってきますよ",
+          "speaker": "ishizu"
+        }
+      ],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "after_potato_sorting",
+      "role": "question",
+      "askable": true,
+      "questionTitle": "ジャガイモの選別について",
+      "requirements": {
+        "storyStageMin": 1,
+        "investigated": ["potato_sorting"]
+      },
+      "once": true,
+      "played": false,
+      "priority": 70,
+      "dialogs": [
+        { "speaker": "ishizu", "text": "ジャガイモの選別も見ましたか。" },
+        { "speaker": "machi", "text": "はい。大きいのと小さいのを分けていました。" },
+        { "speaker": "ishizu", "text": "あれは針江の日常的な作業です。" },
+        { "speaker": "machi", "text": "皆さん、手際がよかったです。" },
+        { "speaker": "ishizu", "text": "長くやっていれば、自然と身につくんです。" },
+        { "speaker": "ishizu", "text": "収穫したものを分けることも、暮らしの一部ですよ。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [
+        {
+          "fragmentId": "potato_sorting",
+          "memo": "収穫したものを分けることも暮らしの一部",
+          "quote": "長くやっていれば、自然と身につくんです",
+          "speaker": "ishizu"
+        }
+      ],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "stage1_default",
+      "role": "default",
+      "askable": false,
+      "requirements": {
+        "storyStageMin": 1
+      },
+      "once": false,
+      "played": false,
+      "priority": 0,
+      "dialogs": [
+        { "speaker": "ishizu", "text": "今日はゆっくり見て回ってください。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    },
+    {
+      "id": "after_free_exploration",
+      "role": "story",
+      "askable": false,
+      "questionTitle": "針江の食べ物について",
+      "requirements": {
+        "storyStageMin": 2,
+        "storyStageMax": 2,
+        "metNpcs": ["npc2", "npc4", "npc5"]
+      },
+      "once": true,
+      "played": false,
+      "priority": 300,
+      "dialogs": [
+        { "speaker": "ishizu", "text": "ずいぶん歩いてきたみたいやな。" },
+        { "speaker": "machi", "text": "はい。いろいろな人に話を聞いていたら、お腹が空いてきました。" },
+        { "speaker": "ishizu", "text": "それなら、宿の方へ行ってみたらええ。" },
+        { "speaker": "ishizu", "text": "針江の水で炊いたご飯や、温かい料理がありますよ。" },
+        { "speaker": "machi", "text": "針江の水で作った料理……気になります。" },
+        { "speaker": "ishizu", "text": "まずは宿の外を見てみてください。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": null,
+      "setStoryHint": {
+        "id": "hostel_hint",
+        "text": "宿の近くを見てみよう",
+        "clearOnInvestigated": "hostel"
+      }
+    },
+    {
+      "id": "after_hostel_loop",
+      "role": "question",
+      "askable": true,
+      "questionTitle": "宿で見た暮らしについて",
+      "requirements": {
+        "storyStageMin": 2,
+        "storyStageMax": 2,
+        "investigated": ["foyer", "table", "poolroom", "pool", "rice", "soup", "kitchen"],
+        "playedDialogGroups": [
+          { "npcId": "npc3", "groupId": "after_hostel_loop" }
+        ]
+      },
+      "once": true,
+      "played": false,
+      "priority": 400,
+      "dialogs": [
+        { "speaker": "machi", "text": "宿の中で、水が暮らしのいろいろなところに使われているのを見ました。" },
+        { "speaker": "ishizu", "text": "そうや。炊事も風呂も、針江では水と一緒にあるんや。" },
+        { "speaker": "ishizu", "text": "次はコミュニティセンターへ行ってみるとええ。村の人のつながりが見えるはずや。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": 3
+    },
+    {
+      "id": "stage5_entry",
+      "role": "question",
+      "askable": true,
+      "questionTitle": "針江の未来について",
+      "requirements": {
+        "storyStageMin": 4,
+        "storyStageMax": 4,
+        "investigated": ["water_grass"]
+      },
+      "once": true,
+      "played": false,
+      "priority": 500,
+      "dialogs": [
+        { "speaker": "machi", "text": "針江の未来について、もう少し知りたいです。" },
+        { "speaker": "ishizu", "text": "まだ見ていない場所もある。自由に村を歩いてみるとええ。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": 5
+    },
+    {
+      "id": "final_dialog",
+      "role": "question",
+      "askable": true,
+      "questionTitle": "最後に話を聞く",
+      "requirements": {
+        "storyStageMin": 5,
+        "storyStageMax": 5,
+        "endingFragmentsComplete": true
+      },
+      "once": true,
+      "played": false,
+      "priority": 600,
+      "dialogs": [
+        { "speaker": "ishizu", "text": "一通り、村を見て回ったか。" },
+        { "speaker": "machi", "text": "はい。水のこと、祭りのこと、空き家のこと……\n大川が琵琶湖まで続いていることも知りました。" },
+        { "speaker": "ishizu", "text": "針江はな、水が全部つないどるんや。" },
+        { "speaker": "ishizu", "text": "稼げる仕組みを作らんと、若いもんは戻ってこん。" },
+        { "speaker": "machi", "text": "でも、水はずっと流れていますよね。" },
+        { "speaker": "ishizu", "text": "そうや。水が生きとる限り、針江は無くなりゃせん。\n水の中に答えはあるんや。" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": 6
+    },
+    {
+      "id": "future_placeholder",
+      "role": "default",
+      "askable": false,
+      "requirements": {
+        "storyStageMin": 99
+      },
+      "once": true,
+      "played": false,
+      "priority": 0,
+      "dialogs": [
+        { "speaker": "ishizu", "text": "…" }
+      ],
+      "unlockFragments": [],
+      "unlockInvestigations": [],
+      "updateNotebook": [],
+      "notifyNpcIds": [],
+      "nextStoryStage": null
+    }
+  ]
+}
