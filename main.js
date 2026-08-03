@@ -290,10 +290,10 @@ let endingCGImage = null;
 let endingNarrationOverlay = null;
 let endingNarrationLines = [];
 let endingNarrationIndex = 0;
-let endingNarrationTimer = null;
 let isEndingNarrationPlaying = false;
+let isEndingNarrationTransitioning = false;
+let endingNarrationContinuePrompt = null;
 const ENDING_NARRATION_FADE_IN = 400;
-const ENDING_NARRATION_HOLD = 5000;
 const ENDING_NARRATION_FADE_OUT = 500;
 
 //===== Author Ending（社区中心 npc6 彩蛋とは独立）=====
@@ -2801,7 +2801,8 @@ function update(time, delta) {
             advanceAuthorEnding(this);
         } else if (
             isEndingNarrationPlaying &&
-            Phaser.Input.Keyboard.JustDown(keySpace)
+            !isEndingNarrationTransitioning &&
+            Phaser.Input.Keyboard.JustDown(keyE)
         ) {
             advanceEndingNarration(this);
         }
@@ -7493,33 +7494,47 @@ function showEndingNarration(scene) {
 }
 
 function advanceEndingNarration(scene) {
-    if (!scene || !isEndingNarrationPlaying) return;
+    if (
+        !scene ||
+        !isEndingNarrationPlaying ||
+        isEndingNarrationTransitioning
+    ) return;
 
-    if (endingNarrationTimer) {
-        endingNarrationTimer.remove(false);
-        endingNarrationTimer = null;
+    isEndingNarrationTransitioning = true;
+    destroyDialogContinuePrompt(scene, endingNarrationContinuePrompt);
+    endingNarrationContinuePrompt = null;
+    scene.tweens.killTweensOf(endingNarrationOverlay);
+
+    if (endingNarrationIndex > 0) {
+        scene.tweens.add({
+            targets: endingNarrationOverlay,
+            alpha: 0,
+            duration: ENDING_NARRATION_FADE_OUT,
+            ease: "Linear",
+            onComplete: () => showNextEndingNarrationLine(scene)
+        });
+        return;
     }
+
+    showNextEndingNarrationLine(scene);
+}
+
+function showNextEndingNarrationLine(scene) {
+    if (!scene || !isEndingNarrationPlaying) return;
 
     if (endingNarrationIndex >= endingNarrationLines.length) {
         isEndingNarrationPlaying = false;
+        isEndingNarrationTransitioning = false;
         finishGame(scene);
         return;
     }
 
-    scene.tweens.killTweensOf(endingNarrationOverlay);
-
     const index = endingNarrationIndex;
     const text = safeText(endingNarrationLines[endingNarrationIndex++]);
-    const typingDuration = 0;
-    const holdDuration = ENDING_NARRATION_HOLD;
-    const fadeOutDuration = ENDING_NARRATION_FADE_OUT;
 
     console.log("[ENDING NARRATION LINE]", {
         index,
-        text,
-        typingDuration,
-        holdDuration,
-        fadeOutDuration
+        text
     });
 
     endingNarrationOverlay.setText(text).setAlpha(0);
@@ -7529,18 +7544,11 @@ function advanceEndingNarration(scene) {
         duration: ENDING_NARRATION_FADE_IN,
         ease: "Linear",
         onComplete: () => {
-            endingNarrationTimer = scene.time.delayedCall(
-                ENDING_NARRATION_HOLD,
-                () => {
-                    endingNarrationTimer = null;
-                    scene.tweens.add({
-                        targets: endingNarrationOverlay,
-                        alpha: 0,
-                        duration: ENDING_NARRATION_FADE_OUT,
-                        ease: "Linear",
-                        onComplete: () => advanceEndingNarration(scene)
-                    });
-                }
+            isEndingNarrationTransitioning = false;
+            endingNarrationContinuePrompt = createDialogContinuePrompt(
+                scene,
+                10020,
+                { x: 978, y: 592 }
             );
         }
     });
